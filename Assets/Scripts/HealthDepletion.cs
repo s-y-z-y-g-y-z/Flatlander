@@ -5,28 +5,37 @@ using UnityEngine.UI;
 
 public class HealthDepletion : MonoBehaviour {
 
-	public float healthVal = 100;
-	public float baseDmg = 1;
-	public float baseHeal = 10;
+    //player has set number of touches he can make to the ground (instead of constant damage)
+    //player can collect to fill up ground touches up to an alloted amount
+	public int healthVal = 100;
+    public int healthChunks = 3; //divisions of health value (ie. hearts)
+    public int baseDmg = 1; //number of health chunks to remove upon ground touch
+	public int baseHeal = 10; //number of units to fill per pickup/action
 
 
-	private Slider health;
-	private bool touchFloor = false;
+    private int maxHealth;
+	public Slider healthBar;
+    private SideScrollController pCtrl;
+    private fInput inputCtrl;
+    private bool playerHasLanded;
+
 	// Use this for initialization
-	void Start () 
-	{
-		health = GameObject.FindObjectOfType<Slider>();
-
-
+	void Start ()
+    {
+        maxHealth = healthVal;
+        pCtrl = FindObjectOfType<SideScrollController>();
+        inputCtrl = FindObjectOfType<fInput>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		health.value = healthVal;	
-		if (touchFloor == true) {
-			RemoveHealth (1);
-		}
+        if(inputCtrl.reset)
+        {
+            healthVal = maxHealth;
+        }
+        healthVal = Mathf.Clamp(healthVal, 0, maxHealth);
+		healthBar.value = healthVal;
 	}
 
 	//algorithm for health depletion
@@ -35,37 +44,50 @@ public class HealthDepletion : MonoBehaviour {
 
 	}
 
-	void RemoveHealth(float dmg)
-	{
-		if (dmg.Equals(null) || dmg == null) 
-		{
-			dmg = baseDmg;
-		}
-
-		healthVal = healthVal - dmg;
-
+	public void RemoveHealth(int dmg, bool removeChunk) //  removeChunk = dmg removes a chunk or percentage of max health from current health
+    {                                                   //  !removeChunk = dmg removes individual health units
+        if (removeChunk)
+        {
+            healthVal -= maxHealth / healthChunks;
+        }
+        else
+        {
+            //bleed
+            healthVal -= dmg;
+        }
 	}
 
-	void AddHealth(float heal)
+	public void AddHealth(int heal, bool healChunk)
 	{
-		if (heal.Equals (null) || heal == null) 
-		{
-			heal = baseHeal;
-		}
-
-		healthVal = healthVal + heal;
+        if(healChunk)
+        {
+            healthVal += maxHealth / healthChunks;
+        }
+        else
+        {
+            healthVal += heal;
+        }
 	}
 		
-
+    //JK~~
+    //resets values
+    public void resetHealth()
+    {
+        healthVal = 100;
+    }
 
 	void OnCollisionEnter(Collision col)
 	{
 		// needs to be changed to check for floor
-		touchFloor = true;
+        if(pCtrl.isGrounded && col.gameObject.tag != "safe")
+        {
+            RemoveHealth(baseDmg, true);
+        }
+
 	}
 
 	void OnCollisionExit(Collision col)
 	{
-		touchFloor = false;
+		playerHasLanded = false;
 	}
 }

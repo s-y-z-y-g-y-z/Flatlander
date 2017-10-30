@@ -51,11 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6111bb51e783c48aebeed66e43a8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  param: {fileID: 0}
   horizontal: 0
   vertical: 0
   horizontalAim: 0
   verticalAim: 0
-  isSidescrolling: 1
+  isSideScrolling: 1
+  snap: 0
+  reset: 0
   isJumping: 0
   isUsingController: 0
+  isShooting: 0
   lookPos: {x: 0, y: 0, z: 0}

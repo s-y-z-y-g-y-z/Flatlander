@@ -15,6 +15,10 @@ public class fInput : MonoBehaviour {
 
     //EXTERNAL
     public ParameterScreen param;
+    public GameObject pauseScreen;
+
+    [HideInInspector]
+    public bool paused;
 
     [Header ("Input Axis Values")]
     public float horizontal;
@@ -33,7 +37,8 @@ public class fInput : MonoBehaviour {
 
     //INTERNAL
     private float lastRotate;       //store rotation for controller aiming
-    private GameObject player;
+    public SideScrollController pCtrl;
+    public GrappleController grappleCtrl;
     private Quaternion aimRotation;
     
     private bool isPaused;
@@ -41,16 +46,18 @@ public class fInput : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        player = GameObject.Find("Player");
+        pCtrl = FindObjectOfType<SideScrollController>();
         isPaused = param.isPaused;
+        paused = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        
         isPaused = param.isPaused;
-        handlePause();
-        toggleSnap();
+        HandlePause();
+        ToggleSnap();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -67,6 +74,7 @@ public class fInput : MonoBehaviour {
 		if (Input.GetButtonDown ("Perspective Shift")) {
 			isSideScrolling = !isSideScrolling;
 		}
+
         if(Input.GetButtonDown("Reset"))
         {
             reset = true;
@@ -76,6 +84,10 @@ public class fInput : MonoBehaviour {
             reset = false;
         }
 
+        if (Input.GetButtonDown("Cancel"))
+        {
+            paused = !paused;
+        }
 
         if (isUsingController)
         {
@@ -92,13 +104,19 @@ public class fInput : MonoBehaviour {
     {
         //Shoots ray forward for hit point so transform can rotate towards
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray,Mathf.Infinity))
         {
-            Vector3 lookP = hit.point;
-            lookP.z = 0f;
-            lookPos = lookP;
+            Vector3 point = ray.GetPoint(Vector3.Distance(pCtrl.transform.position, ray.origin)+2f);
+            //lookPos = point;
+
+            if (pCtrl.isSwinging && grappleCtrl.curHook != null) 
+            {
+                lookPos = grappleCtrl.curHook.transform.position;
+            }
+            else
+            {
+                lookPos = point;
+            }
         }
     }
 
@@ -107,7 +125,7 @@ public class fInput : MonoBehaviour {
     void HandleControllerAim()
     {
         //get vector between camera and player 
-        Vector3 difference = Camera.main.transform.position - player.transform.position;
+        Vector3 difference = Camera.main.transform.position - pCtrl.transform.position;
 
         //why negative difference? idk
         float camRotate = Mathf.Atan2(-difference.x, -difference.z);
@@ -142,17 +160,21 @@ public class fInput : MonoBehaviour {
 
     //JOSH KARMEL
     //Handles pausing the game
-    void handlePause()
+    void HandlePause()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             param.handleParamScreen();
+        }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            param.handlePauseScreen();
         }
     }
 
     //ZAC LOPEZ
     //Toggles environment snap
-    void toggleSnap()
+    void ToggleSnap()
     {
         if (Input.GetButtonDown("Perspective Shift"))
         {

@@ -33,13 +33,17 @@ public class HookController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.impulse.magnitude+col.gameObject.tag);
 
         //hook can't hook the player
         if (col.gameObject.tag != "Player")
         {
             //calls SetHook() from GrappleController.cs
             grapple.SetHook(col.gameObject.GetComponent<Rigidbody>());
+        }
+        else
+        {
+            Debug.Log("hookRb instantiated inside player");
+            Physics.IgnoreCollision(col.gameObject.GetComponent<CapsuleCollider>(), GetComponent<SphereCollider>());
         }
     }
 }

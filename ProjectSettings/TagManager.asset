@@ -7,6 +7,8 @@ TagManager:
   - barrel
   - Environment
   - health
+  - safe
+  - Collectable
   layers:
   - Default
   - TransparentFX

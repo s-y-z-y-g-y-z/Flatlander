@@ -28,6 +28,7 @@ public class SideScrollController : MonoBehaviour
     [Header("Movement Modifiers")]
     public float groundAccelerationPower;
     public float airAccelerationPower;
+    public float swingAccelerationPower;
     public float jumpPower;
     public float groundCheckDistance;   //ray distance for ground check
     public float maxSpeed;
@@ -54,19 +55,17 @@ public class SideScrollController : MonoBehaviour
     [Header("Leaning and Rotating")]
     public float turnSpeed = 15f;
     public float leanSpeed = 1f;
-    public float leanAmount = .5f;
-    public float topLeanAmount = .5f;
+    public float maxLean;
     float turnRot;
-    float curLean;
-    float leanZ;
-    float leanX;
+    public float targetLean;
+    float leanVal;
     
     //PUBLIC INTERNALS
     public Rigidbody playerRb;
     public Vector3 localVelocity;
 
     //handles player animation for aiming
-    public Transform shoulderIkTrans;
+    public GameObject gunObj;
     public Transform rightShoulder;
     public Vector3 lookPos;
 
@@ -84,12 +83,13 @@ public class SideScrollController : MonoBehaviour
     private Transform modelTrans;
     private fInput inputCtrl;
     private GrappleController grapple;
-    private Vector3 initPlayerPos;
+    public Vector3 initPlayerPos;
     //player aiming
-    private GameObject rightShoulderPoint;
+    //private GameObject rightShoulderPoint;
     private float lastRotate;
 
     //USER INPUT PARAMETERS
+    public float leanAmt;
     public float horizontal;
     public float vertical;
     private float topForceDir;
@@ -102,8 +102,7 @@ public class SideScrollController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         SetupAnimator();
-        rightShoulderPoint = new GameObject();
-        rightShoulderPoint.name = transform.root.name + "Right Shoulder IK Helper";
+
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
     }
@@ -113,10 +112,10 @@ public class SideScrollController : MonoBehaviour
     {
         HandleAnimValues();
         HandleJump();
+        lookPos = inputCtrl.lookPos;
         if(inputCtrl.reset)
         {
-            transform.position = initPlayerPos;
-            playerRb.velocity = Vector3.zero;
+            resetPosition();
         }
         horizontal = inputCtrl.horizontal;
         vertical = inputCtrl.vertical;
@@ -125,6 +124,12 @@ public class SideScrollController : MonoBehaviour
         groundCheckHeights = new Vector2(groundHitFront.point.y, groundHitBack.point.y); //checks slopes of surface relative to player forward
         yVelocity = playerRb.velocity.y;
         
+    }
+
+    public void resetPosition()
+    {
+        transform.position = initPlayerPos;
+        playerRb.velocity = Vector3.zero;
     }
 
     //physics functions and calclations
@@ -136,9 +141,8 @@ public class SideScrollController : MonoBehaviour
         HandleGroundCheck();
         HandleMovement();
         HandleRotation();
-        HandleAimingPos();
         HandleFriction();
-        HandleShoulder();
+        //HandleShoulder();
     }
 
 //HANDLERS
@@ -154,6 +158,10 @@ public class SideScrollController : MonoBehaviour
                 {
                     playerRb.AddForce(xForceDirection * groundAccelerationPower, ForceMode.Force);
                 }
+            }
+            else if(isGrounded&&isSwinging)
+            {
+                playerRb.AddForce(xForceDirection * swingAccelerationPower, ForceMode.VelocityChange);
             }
             else
             {
@@ -198,6 +206,18 @@ public class SideScrollController : MonoBehaviour
         if (isGrounded && isJumping && isSideScrolling)
         {
             playerRb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+    }
+
+    public void SpecialJump(float power, Vector3 dir, bool useNormalJump)
+    {
+        if(useNormalJump)
+        {
+            playerRb.AddForce(dir * jumpPower, ForceMode.Impulse);
+        }
+        else
+        {
+            playerRb.AddForce(dir * power, ForceMode.Impulse);
         }
     }
 
@@ -262,8 +282,8 @@ public class SideScrollController : MonoBehaviour
         }
         else
         {
-            playerPhys.dynamicFriction = 1f;
-            playerPhys.staticFriction = 5f;
+            playerPhys.dynamicFriction = .8f;
+            playerPhys.staticFriction = 1f;
             playerRb.AddForce(-groundNormal * stickForce * 5f, ForceMode.Force);
         }
     }
@@ -271,16 +291,6 @@ public class SideScrollController : MonoBehaviour
     //sends values to animator
     void HandleAnimValues()
     {
-        //checks if facing left
-        if (lookPos.x < transform.position.x)
-        {
-            facingLeft = false;
-        }
-        else
-        {
-            facingLeft = true;
-        }
-
         //sends values to animator
         anim.SetBool("OnAir", !isGrounded);
         anim.SetBool("isSideScrolling", isSideScrolling);
@@ -289,143 +299,42 @@ public class SideScrollController : MonoBehaviour
         anim.SetFloat("AirMovement", playerRb.velocity.y);
     }
 
-//////NEEDS FIXIN'
-    //Finds a position for the character to aim at for it to rotate
-    void HandleAimingPos()
-    {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-            {
-                Vector3 point = hit.point;
-
-                //limits aiming depending persp.
-                if (isSideScrolling)
-                {
-                    point.z = transform.position.z;
-                }
-                else if(isSwinging)
-                {
-                    point = grapple.lineEnd;
-                }
-                else
-                {
-                    point.y = rightShoulderPoint.transform.position.y;
-                }
-
-                lookPos = point;
-            }
-        
-
-    }
-
     //handles player rotation
     void HandleRotation()
     {
 
-        //checks if sidescrolling, handles flip values for leaning
-        if (isSideScrolling)
+
+        float dir = Mathf.Sign(localVelocity.z);
+        leanAmt = Mathf.Clamp01(Mathf.Abs(playerRb.velocity.x) / maxSpeed);
+
+        if (isSlowing||isSwinging)
         {
-            if (facingLeft && playerRb.velocity.x < 0f)
-            {
-                flipped = true;
-            }
-            else if (!facingLeft && playerRb.velocity.x > 0f)
-            {
-                flipped = true;
-            }
-            else
-            {
-                flipped = false;
-            }
+            targetLean= -leanAmt*dir;
         }
         else
         {
-            flipped = false;
+            targetLean = leanAmt*dir;
         }
 
-        //turning
+        leanVal = Mathf.Lerp(leanVal, targetLean*maxLean, Time.deltaTime * leanSpeed);
 
-        //if (horizontal > 0f && isGrounded)
-        //{
-        //    facingLeft = false;
-        //    turnRot = Mathf.Lerp(turnRot, 90f, Time.deltaTime * turnSpeed);
-        //}
-        //else if (horizontal < 0f && isGrounded)
-        //{
-        //    facingLeft = true;
-        //    turnRot = Mathf.Lerp(turnRot, 270f, Time.deltaTime * turnSpeed);
-        //}
+        //get rotation from aimpoint
+        Vector3 lookDir;
 
-        //aim turning
-        Vector3 lookDir = (lookPos - transform.position);
-        lookDir.y = 0;
-        float turnRot = Quaternion.LookRotation(lookDir).eulerAngles.y;
+        lookDir = (lookPos - transform.position);
 
-        //handles leaning animation
-        if (isSideScrolling)
+        if (!isSwinging)
         {
-            //handles flip
-            float flip;
-            if (flipped)
-            {
-                flip = -1f;
-            }
-            else
-            {
-                flip = 1f;
-            }
-
-            //leaning
-            if (isSlowing)
-            {
-                leanZ = Mathf.Lerp(leanZ, flip * -60f * (currentVelocity / maxSpeed) * leanAmount, Time.deltaTime * 8f);
-            }
-            else if (!isGrounded)
-            {
-                leanZ = Mathf.Lerp(leanZ, flip * 30f * leanAmount, Time.deltaTime * 3f);
-            }
-            else
-            {
-                leanZ = Mathf.Lerp(leanZ, (flip * 40f * (currentVelocity / maxSpeed)) * leanAmount, Time.deltaTime * 20f);
-            }
-        }
-        else
-        {
-            
+            turnRot = Mathf.Lerp(turnRot, Quaternion.LookRotation(lookDir).eulerAngles.y, Time.deltaTime * turnSpeed);
         }
 
         //the target rotation for the player rotation
         Quaternion targetRotation;
+        targetRotation = Quaternion.Euler(leanVal, turnRot, 0f);
 
-        //ELSE STATEMENT NEEDS FIXIN'
-        if (isSideScrolling)
-        {
-            targetRotation = Quaternion.Euler(leanZ, turnRot, 0f);
-            playerRb.transform.rotation = Quaternion.Slerp(playerRb.transform.rotation, targetRotation, Time.deltaTime * leanSpeed);
-        }
-        else
-        {
-            //CURRENTLY DOES NOT LEAN WITH MOMENTUM
-            targetRotation = Quaternion.Euler(0f, turnRot, 0f);
-            playerRb.transform.rotation = Quaternion.Slerp(playerRb.transform.rotation, targetRotation, Time.deltaTime * leanSpeed); //IS BROKE
-        }
+        playerRb.transform.rotation = targetRotation;
     }
 
-    //handles root IK target position
-    void HandleShoulder()
-    {
-        ///procedural animation for aiming
-        shoulderIkTrans.LookAt(lookPos);
-
-        Vector3 rightShoulderPos = rightShoulder.TransformPoint(Vector3.zero);
-        rightShoulderPoint.transform.position = rightShoulderPos;
-        rightShoulderPoint.transform.parent = transform;
-
-        shoulderIkTrans.position = rightShoulderPoint.transform.position;
-    }
 
     //SETUPS
     //sets up the animator

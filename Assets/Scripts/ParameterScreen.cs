@@ -19,9 +19,11 @@ public class ParameterScreen : MonoBehaviour {
     public WeponRecoil gunRecoil;
     public GrappleController hook;
     public CameraController cam;
+    public GM gm;
 
     //references the Canvas Text
-    public Image pauseScreen;
+    public Image paramScreen;
+    public GameObject pauseScreen;
 
     //player sliders attached to SideScrollerController on the player
     public Slider groundAccSlider;
@@ -62,23 +64,43 @@ public class ParameterScreen : MonoBehaviour {
     public Text CMDNum;
     public Slider camDistanceSlider;
     public Text CDNum;
+
+    //the score nuber in the HUD
+    public Text scoreNum;
     
     [HideInInspector]
     public bool isPaused;
 
-    private bool ISS;
+    public fInput finput;
 
 	// Use this for initialization
 	void Start () {
         isPaused = false;
-        pauseScreen.gameObject.SetActive(false);
+        paramScreen.gameObject.SetActive(false);
+        pauseScreen.SetActive(false);
         updateSliders();
     }
 	
 	// Update is called once per frame
 	void Update () {
         updateScripts();
+        updateScore();
+        checkPause();
 	}
+
+    //checks isPaused to stop the Time
+    public void checkPause()
+    {
+        //pauses the game
+        if (isPaused)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
+    }
 
     //Called in fInput.cs when escape is pressed
     public void handleParamScreen()
@@ -89,13 +111,26 @@ public class ParameterScreen : MonoBehaviour {
         //pauses the game and changes the text on the canvas
         if (isPaused)
         {
-            pauseScreen.gameObject.SetActive(true);
-            Time.timeScale = 0.0f;
+            paramScreen.gameObject.SetActive(true);
+        }
+        else
+        {
+            paramScreen.gameObject.SetActive(false);
+        }
+    }
+
+    //Calls in the pause screen
+    public void handlePauseScreen()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            pauseScreen.SetActive(true);
         }
         else
         {
             pauseScreen.gameObject.SetActive(false);
-            Time.timeScale = 1.0f;
         }
     }
     
@@ -111,8 +146,8 @@ public class ParameterScreen : MonoBehaviour {
         player.isSideScrolling = isSideScrollingToggle.isOn;
 
         //recoil
-        gunRecoil.recoilSpeed = recoilSpeedSlider.value;
-        gunRecoil.recoilLength = recoilLengthSlider.value;
+        //gunRecoil.recoilSpeed = recoilSpeedSlider.value;
+        //gunRecoil.recoilLength = recoilLengthSlider.value;
 
         //hook
         hook.range = hookRangeSlider.value;
@@ -182,6 +217,12 @@ public class ParameterScreen : MonoBehaviour {
         CMDNum.text = cam.movementDamp.ToString();
         camDistanceSlider.value = cam.distance;
         CDNum.text = cam.distance.ToString();
+    }
+
+    //sends data to the text in the UI
+    public void updateScore()
+    {
+        scoreNum.text = gm.score.ToString();
     }
    
 }

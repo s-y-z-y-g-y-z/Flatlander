@@ -31,7 +31,24 @@ public class Platform_Move : MonoBehaviour {
 			moveTarget = true;
 		}
 
-			
+
 		
 	}
+
+	void OnCollisionStay(Collision other){
+
+		if(other.gameObject.tag == "Player"){
+			other.transform.parent = transform;
+
+			
+
+		}
+	}
+
+	void OnCollisionExit(Collision other){
+		if(other.gameObject.tag == "Player"){
+			other.transform.parent = null;
+
+		}
+	}  
 }

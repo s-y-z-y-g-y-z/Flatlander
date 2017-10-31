@@ -26,6 +26,8 @@ public class SideScrollController : MonoBehaviour
 
     //Multipliers for movement values
     [Header("Movement Modifiers")]
+    public float fallMultiplier = 1.5f;
+    public float jumpFallMultiplier = 1f;
     public float groundAccelerationPower;
     public float airAccelerationPower;
     public float swingAccelerationPower;
@@ -206,6 +208,16 @@ public class SideScrollController : MonoBehaviour
         if (isGrounded && isJumping && isSideScrolling)
         {
             playerRb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+
+
+        if(playerRb.velocity.y>0f)
+        {
+            playerRb.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.deltaTime;
+        }
+        else if (playerRb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            playerRb.velocity += Vector3.up * Physics.gravity.y * jumpFallMultiplier * Time.deltaTime;
         }
     }
 

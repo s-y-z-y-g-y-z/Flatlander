@@ -6638,6 +6638,21 @@ Prefab:
       propertyPath: positionOffset.z
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 114849276542593242, guid: b06d11b5581c5554ca80817a366be1a5,
+        type: 2}
+      propertyPath: zMax
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849276542593242, guid: b06d11b5581c5554ca80817a366be1a5,
+        type: 2}
+      propertyPath: zMin
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114849276542593242, guid: b06d11b5581c5554ca80817a366be1a5,
+        type: 2}
+      propertyPath: zoomDamp
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b06d11b5581c5554ca80817a366be1a5, type: 2}
   m_IsPrefabParent: 0
@@ -22085,6 +22100,31 @@ Prefab:
         type: 2}
       propertyPath: recoilLength
       value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631560739002636, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: swingPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631560739002636, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: range
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160651120588822, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: swingAccelerationPower
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160651120588822, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: airAccelerationPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160651120588822, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: jumpPower
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}

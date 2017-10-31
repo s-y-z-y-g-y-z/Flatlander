@@ -323,11 +323,24 @@ public class SideScrollController : MonoBehaviour
 
         lookDir = (lookPos - transform.position);
 
+        float look;
         if (!isSwinging)
         {
-            turnRot = Mathf.Lerp(turnRot, Quaternion.LookRotation(lookDir).eulerAngles.y, Time.deltaTime * turnSpeed);
+            if (lookPos.x < transform.position.x)
+            {
+                look = -90f;
+            }
+            else
+            {
+                look = 90f;
+            }
+        }
+        else
+        {
+            look = turnRot;
         }
 
+        turnRot = Mathf.Lerp(turnRot, look, Time.deltaTime * turnSpeed);
         //the target rotation for the player rotation
         Quaternion targetRotation;
         targetRotation = Quaternion.Euler(leanVal, turnRot, 0f);

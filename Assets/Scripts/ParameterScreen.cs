@@ -159,7 +159,7 @@ public class ParameterScreen : MonoBehaviour {
         hook.ropeDroop = ropeDroopSlider.value;
 
         //camera
-        cam.movementDamp = camMovementDampSlider.value;
+        //cam.movementDamp = camMovementDampSlider.value;
         cam.distance = camDistanceSlider.value;
 
         updateSliders();
@@ -213,8 +213,8 @@ public class ParameterScreen : MonoBehaviour {
         RDNum.text = hook.ropeDroop.ToString();
 
         //camera
-        camMovementDampSlider.value = cam.movementDamp;
-        CMDNum.text = cam.movementDamp.ToString();
+        //camMovementDampSlider.value = cam.movementDamp;
+        //CMDNum.text = cam.movementDamp.ToString();
         camDistanceSlider.value = cam.distance;
         CDNum.text = cam.distance.ToString();
     }

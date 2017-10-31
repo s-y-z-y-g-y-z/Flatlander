@@ -53,7 +53,9 @@ public class Reset : MonoBehaviour {
     //function to reset the scene
     public void resetScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        pCtrl.transform.position = pCtrl.initPlayerPos;
+        pCtrl.playerRb.velocity = Vector3.zero;
     }
 
 	void hardReset()

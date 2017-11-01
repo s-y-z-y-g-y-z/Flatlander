@@ -4,14 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+/* USED
+ * =================
+ * Zachary Lopez
+ * 
+ * Script for controlling Main Menu Screen including
+ * Starting from Level 1
+ * Selecting a level by switching scenes
+ * Quit and exit application
+ */
 public class MainMenu : MonoBehaviour {
 
 	public Button start; 
 	public Button lvl;
 	public Button quit;
-
+	public Canvas menu;
+	public Canvas select;
 	// Use this for initialization
+	// adding listeners to buttons
 	void Start () {
+
 		Button btn = start.GetComponent<Button> ();
 		btn.onClick.AddListener (GameStart);
 
@@ -20,13 +33,9 @@ public class MainMenu : MonoBehaviour {
 
 		btn = lvl.GetComponent<Button> ();
 		btn.onClick.AddListener (LevelSelect);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-			
-	}
 
+	}
+	// Start the game, proto scene
 	void GameStart()
 	{
 		SceneManager.LoadScene ("proto", LoadSceneMode.Single);
@@ -34,12 +43,14 @@ public class MainMenu : MonoBehaviour {
 
 	void Quit()
 	{
-
+		Application.Quit ();
 	}
 
+	//seperact scene?
 	void LevelSelect()
 	{
-
+		menu.enabled = false;
+		select.enabled = true;
 	}
 		
 }

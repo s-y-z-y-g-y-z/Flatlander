@@ -33,21 +33,9 @@ public class SmoothFollow : MonoBehaviour
     [Space(1)]
     public bool target1Snap;
     public bool target2Snap;
-    public bool startOnTarget1;
-
-    //initializes
-    private void Start()
-    {
-        //starts the transform at the player's transform
-        
-        if (startOnTarget1)
-        {
-            transform.position = target1.position;
-        }
-    }
+    public bool onTarget1 = true;
 
     //INCOMPLETE
-    //ONLY WORKS WITH ONE TARGET
     void Update()
     {
         target2Snap = false;
@@ -56,15 +44,31 @@ public class SmoothFollow : MonoBehaviour
         vectDist = Vector3.Distance(transform.position, target1.position);
 
         //checks if the distance is within the threshold and lerps towards target
-        if (vectDist > smoothSnapThresh && !target1Snap)
+        if (onTarget1)
         {
-            transform.position = Vector3.Lerp(transform.position, target1.position, Time.deltaTime * smoothFactor);
+            if (vectDist > smoothSnapThresh && !target1Snap)
+            {
+                transform.position = Vector3.Lerp(transform.position, target1.position, Time.deltaTime * smoothFactor);
+            }
+            else
+            {
+                //stops lerping if it reaches the threshold
+                target1Snap = true;
+                transform.position = target1.position;
+            }
         }
         else
         {
-            //stops lerping if it reaches the threshold
-            target1Snap = true;
-            transform.position = target1.position;
+            if (vectDist > smoothSnapThresh && !target2Snap)
+            {
+                transform.position = Vector3.Lerp(transform.position, target2.position, Time.deltaTime * smoothFactor);
+            }
+            else
+            {
+                //stops lerping if it reaches the threshold
+                target2Snap = true;
+                transform.position = target2.position;
+            }
         }
     }
 }

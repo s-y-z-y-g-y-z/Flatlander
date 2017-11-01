@@ -23,7 +23,11 @@ using UnityEngine.SceneManagement;
 public class SideScrollController : MonoBehaviour
 {
     //PUBLICS
-
+    public Animator anim;
+    public PhysicMaterial playerPhys;
+    public GameObject characterGameObj;
+    public GameObject gunObj;
+    public Transform rightShoulder;
     //Multipliers for movement values
     [Header("Movement Modifiers")]
     public float fallMultiplier = 1.5f;
@@ -46,10 +50,11 @@ public class SideScrollController : MonoBehaviour
     public bool isSwinging;             //from GrappleController.cs
     public bool facingLeft;
     public bool isSlowing;              //player is decelerating horizontally
-    public bool inContact;              //checks if the player is in contact with any other collider
+    public bool inContact;
+    public bool isDead;
     public bool drawDebug = false;
     public LayerMask groundMask;        //Layers the ground rays can hit
-    public PhysicMaterial playerPhys;
+
     float impactForce;
     bool flipped;
 
@@ -67,8 +72,7 @@ public class SideScrollController : MonoBehaviour
     public Vector3 localVelocity;
 
     //handles player animation for aiming
-    public GameObject gunObj;
-    public Transform rightShoulder;
+
     public Vector3 lookPos;
 
     //PRIVATE INTERNALS
@@ -81,8 +85,6 @@ public class SideScrollController : MonoBehaviour
     private Vector3 xForceDirection;
     private Vector2 groundCheckHeights;
     private Vector3 groundNormal;
-    private Animator anim;
-    private Transform modelTrans;
     private fInput inputCtrl;
     private GrappleController grapple;
     public Vector3 initPlayerPos;
@@ -97,21 +99,24 @@ public class SideScrollController : MonoBehaviour
     private float topForceDir;
     private bool isJumping;
     private Vector3 xzForceDirection;
-    
+    private Rigidbody[] jointRbs;
+    private Collider[] jointCols;
     //initializes objects and sets up animator
     void Start ()
     {
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
-        SetupAnimator();
-
+        jointRbs = characterGameObj.GetComponentsInChildren<Rigidbody>();
+        jointCols = characterGameObj.GetComponentsInChildren<Collider>();
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
+      
     }
     
     //for non-phsyics physics and calculations
     private void Update()
     {
+        HandleRagdoll();
         HandleAnimValues();
         HandleJump();
         lookPos = inputCtrl.lookPos;
@@ -360,29 +365,48 @@ public class SideScrollController : MonoBehaviour
         playerRb.transform.rotation = targetRotation;
     }
 
-
-    //SETUPS
-    //sets up the animator
-    void SetupAnimator()
+    void HandleRagdoll()
     {
-        //ref to animator component on root
-        anim = GetComponent<Animator>();
-
-        //use avatar from a child animator component if present (for easy swap of char model as child node)
-        foreach (var childAnimator in GetComponentsInChildren<Animator>())
+        if(Input.GetKeyDown(KeyCode.K))
         {
-            if (childAnimator != anim)
+            isDead = !isDead;
+        }
+        if (isDead)
+        {
+            characterGameObj.transform.parent = null;
+            playerCollider.enabled = false;
+            playerRb.isKinematic = true;
+            anim.enabled = false;
+            foreach (Rigidbody rb in jointRbs)
             {
-                anim.avatar = childAnimator.avatar;
-                modelTrans = childAnimator.transform;
-                Destroy(childAnimator);
-                //if first animator found, stop search
-                break;
+                rb.interpolation = RigidbodyInterpolation.None;
+                rb.isKinematic = false;
+            }
+            foreach (Collider col in jointCols)
+            {
+                col.enabled = true;
+            }
+        }
+        else
+        {
+            characterGameObj.transform.parent = transform;
+            characterGameObj.transform.localPosition = Vector3.zero;
+            characterGameObj.transform.localRotation = Quaternion.identity;
+            playerCollider.enabled = true;
+            playerRb.isKinematic = false;
+            anim.enabled = true;
+            foreach (Rigidbody rb in jointRbs)
+            {
+                rb.interpolation = RigidbodyInterpolation.None;
+                rb.isKinematic = true;
+            }
+            foreach (Collider col in jointCols)
+            {
+                col.enabled = false;
             }
         }
     }
-
-//COLLISION CHECKS
+    //COLLISION CHECKS
     //checks collision entering
     private void OnCollisionEnter(Collision collision)
     {

@@ -47,6 +47,7 @@ public class fInput : MonoBehaviour {
 	void Start ()
     {
         pCtrl = FindObjectOfType<SideScrollController>();
+        grappleCtrl=FindObjectOfType<GrappleController>();
         isPaused = param.isPaused;
         paused = false;
 	}
@@ -104,19 +105,17 @@ public class fInput : MonoBehaviour {
     {
         //Shoots ray forward for hit point so transform can rotate towards
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray,Mathf.Infinity))
-        {
-            Vector3 point = ray.GetPoint(Vector3.Distance(pCtrl.transform.position, ray.origin)+2f);
-            //lookPos = point;
 
-            if (pCtrl.isSwinging && grappleCtrl.curHook != null) 
-            {
-                lookPos = grappleCtrl.curHook.transform.position;
-            }
-            else
-            {
-                lookPos = point;
-            }
+        //Vector3 point = (ray.GetPoint(Vector3.Distance(ray.origin, grappleCtrl.barrel.transform.position))- grappleCtrl.barrel.transform.position).normalized*4f;
+        Vector3 point = ray.GetPoint(Vector3.Distance(ray.origin, grappleCtrl.barrel.transform.position));
+
+        if (pCtrl.isSwinging && grappleCtrl.curHook != null)
+        {
+            lookPos = grappleCtrl.curHook.transform.position;
+        }
+        else
+        {
+            lookPos = point;
         }
     }
 

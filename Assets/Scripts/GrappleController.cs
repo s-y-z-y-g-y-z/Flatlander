@@ -20,6 +20,7 @@ public class GrappleController : MonoBehaviour
     public GameObject barrel;
     public GameObject gunshotParticlePrefab;
     public GameObject dashParticlePrefab;
+    public ParameterScreen ps;
 
     [Header("Modifiers")]
     public float climbSpeed;
@@ -52,6 +53,7 @@ public class GrappleController : MonoBehaviour
     public GameObject curHook;
     private Rigidbody curHookRb;
 
+
     private Rigidbody curAnchorRb;
     private Vector3 lineMid;
     public Vector3 lineEnd;
@@ -82,7 +84,7 @@ public class GrappleController : MonoBehaviour
         lineCoef = ropeDroop / 10f;
 
         //checks if shooting
-        if (inputCtrl.isShooting || inputCtrl.reset && curHook != null)
+        if ((inputCtrl.isShooting || inputCtrl.reset && curHook != null) && !pCtrl.isDead)
         {
             Shoot();
         }

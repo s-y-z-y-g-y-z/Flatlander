@@ -15,6 +15,7 @@ public class WinArea : MonoBehaviour {
     public ParameterScreen ps;      //to pause the game
     public GameObject winScreen;    //the win text UI
     public Reset reset;             //resets the scene after win
+    public GM gm;
 
     [HideInInspector]
     public bool win;
@@ -41,7 +42,7 @@ public class WinArea : MonoBehaviour {
             {
                 win = false;
                 ps.isPaused = false;
-                reset.resetScene();
+                gm.resetScene();
             }
             if (Input.GetButtonDown("Cancel"))
             {

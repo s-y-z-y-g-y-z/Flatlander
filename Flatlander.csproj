@@ -235,6 +235,7 @@
     <Compile Include="Assets\Scripts\Collect.cs" />
     <Compile Include="Assets\Scripts\CollectableSpin.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\DeathScreen.cs" />
     <Compile Include="Assets\Scripts\EnvAttributes.cs" />
     <Compile Include="Assets\Scripts\EnvSnap.cs" />
     <Compile Include="Assets\Scripts\fInput.cs" />

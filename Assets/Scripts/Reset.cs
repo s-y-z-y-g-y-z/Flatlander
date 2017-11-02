@@ -12,10 +12,15 @@ using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour {
 
-	fInput inputCtrl;
-	public bool resetLevel;
+    //PUBLIC SCRIPT REFERENCES
+	public SideScrollController pCtrl;
+	public fInput inputCtrl;
+    public HealthDepletion hd;
+    public GM gm;
+
+    //PUBLIC vals
+    public bool resetLevel;
 	public bool harderReset;
-	SideScrollController pCtrl;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +36,7 @@ public class Reset : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Player") {
-            resetScene();
+            gm.resetScene();
 		}
 	}
 	/*
@@ -49,14 +54,17 @@ public class Reset : MonoBehaviour {
 		}
 	}*/
     
-    //JK~~
+    /*
+    //JK~~ function moved to the GM
     //function to reset the scene
     public void resetScene()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         pCtrl.transform.position = pCtrl.initPlayerPos;
         pCtrl.playerRb.velocity = Vector3.zero;
+        hd.healthVal = 100;
     }
+    */
 
 	void hardReset()
 	{

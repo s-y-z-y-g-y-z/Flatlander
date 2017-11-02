@@ -16,29 +16,43 @@ public class GM : MonoBehaviour
     public ParameterScreen ps;
     public HealthDepletion hd;
     public Reset res;
-    
+    public GameObject ks;
 
     //PUBLIC ATTRIBUTES
     public bool resetLevel;
     public float score;
     public int healthVal;
+    public bool isDead;
 
 	// Use this for initialization
 	void Start ()
     {
+        isDead = false;
         inputCtrl = FindObjectOfType<fInput>();
         pCtrl = FindObjectOfType<SideScrollController>();
         healthVal = hd.healthVal;
+        ks.SetActive(false);
 	}
 
     // Update is called once per frame
     void Update()
     {
         healthVal = hd.healthVal;
+        checkDead();
 
-        if(healthVal <= 0 || inputCtrl.reset)
+        if (isDead)
         {
-            handleReset();
+            ks.SetActive(true);
+            pCtrl.isDead = true;
+            if (Input.GetButtonDown("Jump"))
+            {
+                resetScene();
+            }
+        }
+        else
+        {
+            ks.SetActive(false);
+            pCtrl.isDead = false;
         }
     }
 
@@ -48,9 +62,25 @@ public class GM : MonoBehaviour
         score += value;
     }
 
-    //Resets the level
-    public void handleReset()
+    //checks if the player is dead
+    public void checkDead()
     {
-        res.resetScene();
+        if(healthVal <= 0 || inputCtrl.reset)
+        {
+            isDead = true;
+        }
+        else
+        {
+            isDead = false;
+        }
+    }
+    
+    //function to reset the scene
+    public void resetScene()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        pCtrl.transform.position = pCtrl.initPlayerPos;
+        pCtrl.playerRb.velocity = Vector3.zero;
+        hd.healthVal = 100;
     }
 }

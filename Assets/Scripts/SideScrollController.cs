@@ -101,6 +101,7 @@ public class SideScrollController : MonoBehaviour
     private Vector3 xzForceDirection;
     private Rigidbody[] jointRbs;
     private Collider[] jointCols;
+
     //initializes objects and sets up animator
     void Start ()
     {
@@ -110,7 +111,7 @@ public class SideScrollController : MonoBehaviour
         jointCols = characterGameObj.GetComponentsInChildren<Collider>();
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
-      
+        isDead = false;
     }
     
     //for non-phsyics physics and calculations
@@ -365,6 +366,7 @@ public class SideScrollController : MonoBehaviour
         playerRb.transform.rotation = targetRotation;
     }
 
+    //HEY BEN IF YOU COULD DOCUMENT THIS THATD BE GREAT THANKS
     void HandleRagdoll()
     {
         if(Input.GetKeyDown(KeyCode.K))

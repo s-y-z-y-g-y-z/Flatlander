@@ -22,6 +22,10 @@ public class HealthDepletion : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        healthVal = 100;
+        healthChunks = 10;
+        baseDmg = 1;
+        baseHeal = 10;
         maxHealth = healthVal;
         pCtrl = FindObjectOfType<SideScrollController>();
         inputCtrl = FindObjectOfType<fInput>();
@@ -57,9 +61,9 @@ public class HealthDepletion : MonoBehaviour {
         }
 	}
 
-	public void AddHealth(int heal, bool healChunk)
-	{
-        if(healChunk)
+    public void AddHealth(int heal, bool healChunk)
+    {
+        if (healChunk)
         {
             healthVal += maxHealth / healthChunks;
         }
@@ -67,7 +71,7 @@ public class HealthDepletion : MonoBehaviour {
         {
             healthVal += heal;
         }
-	}
+    }
 		
     //JK~~
     //resets values

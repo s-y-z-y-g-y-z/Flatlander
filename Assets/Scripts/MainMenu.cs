@@ -41,6 +41,7 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene ("proto", LoadSceneMode.Single);
 	}
 
+	//Quits out application
 	void Quit()
 	{
 		Application.Quit ();

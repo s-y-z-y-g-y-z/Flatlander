@@ -17,6 +17,7 @@ public class GM : MonoBehaviour
     public HealthDepletion hd;
     public Reset res;
     public GameObject ks;
+    public GrappleController gCtrl;
 
     //PUBLIC ATTRIBUTES
     public bool resetLevel;
@@ -44,6 +45,7 @@ public class GM : MonoBehaviour
         {
             ks.SetActive(true);
             pCtrl.isDead = true;
+            gCtrl.Retract();
             if (Input.GetButtonDown("Jump"))
             {
                 resetScene();

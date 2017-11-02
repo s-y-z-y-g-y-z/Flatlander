@@ -6447,7 +6447,7 @@ GameObject:
   - component: {fileID: 384717518}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8249,7 +8249,7 @@ GameObject:
   - component: {fileID: 498378494}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8907,7 +8907,7 @@ GameObject:
   - component: {fileID: 544898481}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9030,7 +9030,7 @@ GameObject:
   - component: {fileID: 546548843}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9931,6 +9931,7 @@ MonoBehaviour:
     type: 2}
   dashParticlePrefab: {fileID: 1683027387717202, guid: 068387e48edd18940bcf0c3eda2f7027,
     type: 2}
+  ps: {fileID: 0}
   climbSpeed: 1
   swingPower: 10
   fastClimbDamper: 0
@@ -12236,7 +12237,7 @@ GameObject:
   - component: {fileID: 712922801}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13233,7 +13234,7 @@ GameObject:
   - component: {fileID: 769614753}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13324,6 +13325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minMaxAim: {x: 0, y: 0}
+  ps: {fileID: 0}
 --- !u!1 &779309364
 GameObject:
   m_ObjectHideFlags: 0
@@ -13750,7 +13752,7 @@ GameObject:
   - component: {fileID: 791426407}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14168,7 +14170,7 @@ GameObject:
   - component: {fileID: 809945447}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16581,7 +16583,7 @@ GameObject:
   - component: {fileID: 991522895}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19309,7 +19311,7 @@ GameObject:
   - component: {fileID: 1157525226}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19829,7 +19831,7 @@ GameObject:
   - component: {fileID: 1199481181}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20552,7 +20554,7 @@ GameObject:
   - component: {fileID: 1235131495}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20767,7 +20769,7 @@ GameObject:
   - component: {fileID: 1266099385}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21726,7 +21728,7 @@ GameObject:
   - component: {fileID: 1339403155}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25270,7 +25272,7 @@ GameObject:
   - component: {fileID: 1578912562}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27118,7 +27120,7 @@ GameObject:
   - component: {fileID: 1692225327}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27969,7 +27971,7 @@ GameObject:
   - component: {fileID: 1767028579}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28271,7 +28273,7 @@ GameObject:
   - component: {fileID: 1782387651}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29120,7 +29122,7 @@ GameObject:
   - component: {fileID: 1846527614}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30365,7 +30367,7 @@ GameObject:
   - component: {fileID: 1934546096}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30638,7 +30640,7 @@ GameObject:
   - component: {fileID: 1971224455}
   m_Layer: 0
   m_Name: CollectableCollider
-  m_TagString: Untagged
+  m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

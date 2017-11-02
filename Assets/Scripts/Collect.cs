@@ -31,7 +31,7 @@ public class Collect : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && tag == "CollectableCollider")
         {
             gm.HandleScore(1);
             gameObject.SetActive(false);

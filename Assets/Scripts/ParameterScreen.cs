@@ -222,7 +222,7 @@ public class ParameterScreen : MonoBehaviour {
     //sends data to the text in the UI
     public void updateScore()
     {
-        scoreNum.text = gm.score.ToString();
+        scoreNum.text = gm.collScore.ToString();
     }
    
 }

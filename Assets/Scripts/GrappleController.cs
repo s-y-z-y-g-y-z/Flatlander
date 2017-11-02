@@ -21,6 +21,7 @@ public class GrappleController : MonoBehaviour
     public GameObject gunshotParticlePrefab;
     public GameObject dashParticlePrefab;
     public ParameterScreen ps;
+    public GM gm;
 
     [Header("Modifiers")]
     public float climbSpeed;
@@ -84,7 +85,7 @@ public class GrappleController : MonoBehaviour
         lineCoef = ropeDroop / 10f;
 
         //checks if shooting
-        if ((inputCtrl.isShooting || inputCtrl.reset && curHook != null) && !pCtrl.isDead)
+        if ((inputCtrl.isShooting || inputCtrl.reset && curHook != null) && (!pCtrl.isDead || ps.isPaused))
         {
             Shoot();
         }
@@ -218,7 +219,7 @@ public class GrappleController : MonoBehaviour
             //if(Physics.Raycast())
         }
     }
-
+    
     //handles reloading and shooting
     public void Shoot()
     {
@@ -228,17 +229,25 @@ public class GrappleController : MonoBehaviour
         {
             staticHook.SetActive(false);
             recoil.isShooting = true;
+
             //pCtrl.playerRb.AddForceAtPosition(-transform.forward * recoilForce, transform.position, ForceMode.VelocityChange);
+
             pCtrl.playerRb.AddForce(-transform.forward * recoilForce, ForceMode.VelocityChange);
+
             curHook = Instantiate(HookPrefab, barrel.transform.position, barrel.transform.rotation);
             curHookRb = curHook.GetComponent<Rigidbody>();
             curHookRb.AddForce(barrel.transform.forward * power, ForceMode.Impulse);
             curParticle = Instantiate(gunshotParticlePrefab, barrel.transform.position, barrel.transform.rotation);
+
             curParticle.transform.parent = barrel.transform;
+
             Destroy(curParticle, 5f);
+
             joint.connectedBody = curHookRb;
             joint.connectedAnchor = Vector3.zero;
+
             targetDist = range;
+
             joint.massScale = massInfluence;
             joint.enableCollision = false;
 

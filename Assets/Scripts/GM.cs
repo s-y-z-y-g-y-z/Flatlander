@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * JOSH KARMEL
@@ -16,14 +17,22 @@ public class GM : MonoBehaviour
     public ParameterScreen ps;
     public HealthDepletion hd;
     public Reset res;
-    public GameObject ks;
     public GrappleController gCtrl;
+    public WinArea winArea;
 
     //PUBLIC ATTRIBUTES
     public bool resetLevel;
-    public float score;
+    public float collScore;
+    public float totalScore;
     public int healthVal;
     public bool isDead;
+    public Text clock;
+    public GameObject ks;
+    public GameObject ws;
+
+    private float timer;
+    private float roundedTimer;
+    private float startTime;
 
 	// Use this for initialization
 	void Start ()
@@ -33,6 +42,9 @@ public class GM : MonoBehaviour
         pCtrl = FindObjectOfType<SideScrollController>();
         healthVal = hd.healthVal;
         ks.SetActive(false);
+        ws.SetActive(false);
+        startTime = 6000;
+        timer = startTime;
 	}
 
     // Update is called once per frame
@@ -40,6 +52,7 @@ public class GM : MonoBehaviour
     {
         healthVal = hd.healthVal;
         checkDead();
+        
 
         if (isDead)
         {
@@ -51,17 +64,28 @@ public class GM : MonoBehaviour
                 resetScene();
             }
         }
+        else if (winArea.win)
+        {
+            ws.SetActive(true);
+            gCtrl.Retract();
+            if (Input.GetButtonDown("Jump"))
+            {
+                resetScene();
+            }
+        }
         else
         {
             ks.SetActive(false);
+            ws.SetActive(false);
             pCtrl.isDead = false;
+            updateClock();
         }
     }
 
     //adds value to score
     public void HandleScore(float value)
     {
-        score += value;
+        collScore += value;
     }
 
     //checks if the player is dead
@@ -84,5 +108,31 @@ public class GM : MonoBehaviour
         pCtrl.transform.position = pCtrl.initPlayerPos;
         pCtrl.playerRb.velocity = Vector3.zero;
         hd.healthVal = 100;
+
+        if (ps.isPaused)
+        {
+            ps.isPaused = false;
+        }
+
+        winArea.win = false;
+    }
+
+    public void updateClock()
+    {
+        timer -= Time.deltaTime * 12f;
+
+        roundedTimer = Mathf.RoundToInt(timer);
+
+        clock.text = roundedTimer.ToString();
+    }
+
+    public float calculateScore()
+    {
+        if (isDead)
+        {
+            roundedTimer = 0;
+        }
+        totalScore = roundedTimer + (collScore * 1500);
+        return totalScore;
     }
 }

@@ -19,23 +19,24 @@ public class DeathScreen : MonoBehaviour {
     //public buttons
     public Button reset;
     public Button menu;
+    public Text scoreText;
 
 	// Use this for initialization
 	void Start () {
         reset.onClick.AddListener(buttonReset);
         menu.onClick.AddListener(buttonMenu);
+        scoreText.text = "Score: ";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        scoreText.text = "Score: " + gm.calculateScore();
 	}
 
     public void buttonReset()
     {
         gm.resetScene();
         gm.isDead = false;
-
     }
 
     public void buttonMenu()

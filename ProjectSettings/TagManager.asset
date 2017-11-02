@@ -10,8 +10,6 @@ TagManager:
   - safe
   - Collectable
   - Hook
-  - Fire
-  - CollectableBox
   layers:
   - Default
   - TransparentFX

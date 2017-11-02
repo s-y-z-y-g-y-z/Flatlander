@@ -7,10 +7,10 @@ public class HealthDepletion : MonoBehaviour {
 
     //player has set number of touches he can make to the ground (instead of constant damage)
     //player can collect to fill up ground touches up to an alloted amount
-	public int healthVal;
-    public int healthChunks; //divisions of health value (ie. hearts)
-    public int baseDmg; //number of health chunks to remove upon ground touch
-	public int baseHeal; //number of units to fill per pickup/action
+	public int healthVal = 100;
+    public int healthChunks = 3; //divisions of health value (ie. hearts)
+    public int baseDmg = 1; //number of health chunks to remove upon ground touch
+	public int baseHeal = 10; //number of units to fill per pickup/action
 
 
     private int maxHealth;
@@ -22,10 +22,6 @@ public class HealthDepletion : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        healthVal = 100;
-        healthChunks = 10;
-        baseDmg = -1;
-        baseHeal = 10;
         maxHealth = healthVal;
         pCtrl = FindObjectOfType<SideScrollController>();
         inputCtrl = FindObjectOfType<fInput>();
@@ -47,8 +43,7 @@ public class HealthDepletion : MonoBehaviour {
 	{
 
 	}
-    
-    //to be merged with addhealth. If health needs to be added, paramater is +, if removed, parameter is -. ~~JK
+
 	public void RemoveHealth(int dmg, bool removeChunk) //  removeChunk = dmg removes a chunk or percentage of max health from current health
     {                                                   //  !removeChunk = dmg removes individual health units
         if (removeChunk)
@@ -73,20 +68,6 @@ public class HealthDepletion : MonoBehaviour {
             healthVal += heal;
         }
 	}
-
-    //takes in a bool for whether or not is healing or hurting.
-    //if healing, heals the player. if hurting, it hurts them.
-    public void handleHealth(bool isHealing)
-    {
-        if (isHealing)
-        {
-            healthVal += maxHealth / healthChunks;
-        }
-        else
-        {
-            healthVal -= maxHealth / healthChunks;
-        }
-    }
 		
     //JK~~
     //resets values
@@ -101,10 +82,6 @@ public class HealthDepletion : MonoBehaviour {
         if(pCtrl.isGrounded && col.gameObject.tag != "safe")
         {
             RemoveHealth(baseDmg, true);
-        }
-        else if(col.gameObject.tag == "CollectableBox")
-        {
-            AddHealth(baseHeal, true);
         }
 
 	}

@@ -75,9 +75,9 @@
      <Compile Include="Assets\Scripts\ObjectScaler.cs" />
      <Compile Include="Assets\Scripts\OneNodeRope.cs" />
      <Compile Include="Assets\Scripts\ParameterScreen.cs" />
-     <Compile Include="Assets\Scripts\PerspectiveSize.cs" />
      <Compile Include="Assets\Scripts\Platform_Move.cs" />
      <Compile Include="Assets\Scripts\Reset.cs" />
+     <Compile Include="Assets\Scripts\Rock_Fall.cs" />
      <Compile Include="Assets\Scripts\Rope.cs" />
      <Compile Include="Assets\Scripts\ScoreHandler.cs" />
      <Compile Include="Assets\Scripts\SideScrollController.cs" />

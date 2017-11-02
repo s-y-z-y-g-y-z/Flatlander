@@ -110,7 +110,7 @@ public class SideScrollController : MonoBehaviour
         jointCols = characterGameObj.GetComponentsInChildren<Collider>();
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
-      
+        isDead = false;
     }
     
     //for non-phsyics physics and calculations
@@ -371,6 +371,7 @@ public class SideScrollController : MonoBehaviour
         {
             isDead = !isDead;
         }
+
         if (isDead)
         {
             characterGameObj.transform.parent = null;
@@ -406,6 +407,7 @@ public class SideScrollController : MonoBehaviour
             }
         }
     }
+
     //COLLISION CHECKS
     //checks collision entering
     private void OnCollisionEnter(Collision collision)

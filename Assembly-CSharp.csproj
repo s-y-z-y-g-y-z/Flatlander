@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\CollectableSpin.cs" />
      <Compile Include="Assets\Scripts\DataController.cs" />
+     <Compile Include="Assets\Scripts\DeathScreen.cs" />
      <Compile Include="Assets\Scripts\EnvAttributes.cs" />
      <Compile Include="Assets\Scripts\EnvSnap.cs" />
      <Compile Include="Assets\Scripts\fInput.cs" />
@@ -79,11 +80,11 @@
      <Compile Include="Assets\Scripts\Reset.cs" />
      <Compile Include="Assets\Scripts\Rock_Fall.cs" />
      <Compile Include="Assets\Scripts\Rope.cs" />
-     <Compile Include="Assets\Scripts\ScoreHandler.cs" />
      <Compile Include="Assets\Scripts\SideScrollController.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\WeponRecoil.cs" />
      <Compile Include="Assets\Scripts\WinArea.cs" />
+     <Compile Include="Assets\Scripts\WinScreen.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />

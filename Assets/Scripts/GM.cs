@@ -97,7 +97,7 @@ public class GM : MonoBehaviour
     //checks if the player is dead
     public void checkDead()
     {
-        if(healthVal <= 0 || inputCtrl.reset)
+        if(healthVal <= 0 || inputCtrl.reset || res.hitGround)
         {
             isDead = true;
         }
@@ -114,10 +114,17 @@ public class GM : MonoBehaviour
         pCtrl.transform.position = pCtrl.initPlayerPos;
         pCtrl.playerRb.velocity = Vector3.zero;
         hd.healthVal = 100;
+        scoreColCount = 0;
+        totalScore = 0;
+        timer = startTime;
 
         if (ps.isPaused)
         {
             ps.isPaused = false;
+        }
+        if (res.hitGround)
+        {
+            res.hitGround = false;
         }
 
         winArea.win = false;
@@ -138,7 +145,14 @@ public class GM : MonoBehaviour
         {
             roundedTimer = 0;
         }
+
         totalScore = roundedTimer + (colScore * 1500) + (scoreColCount * 3000);
         return totalScore;
+
+    }
+
+    public void kill()
+    {
+        isDead = true;
     }
 }

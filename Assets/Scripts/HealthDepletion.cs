@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class HealthDepletion : MonoBehaviour {
 
+    //PUBLIC ATTRIBUTES
     //player has set number of touches he can make to the ground (instead of constant damage)
     //player can collect to fill up ground touches up to an alloted amount
-	public int healthVal = 100;
-    public int healthChunks = 3; //divisions of health value (ie. hearts)
-    public int baseDmg = 1; //number of health chunks to remove upon ground touch
-	public int baseHeal = 10; //number of units to fill per pickup/action
+	public int healthVal;       //current player health
+    public int healthChunks;    //divisions of health value (ie. hearts)
+    public int baseDmg;         //number of health chunks to remove upon ground touch
+	public int baseHeal;        //number of units to fill per pickup/action
+    public Slider healthBar;
 
-
+    //PRIVATE ATTRIBUTES
     private int maxHealth;
-	public Slider healthBar;
     private SideScrollController pCtrl;
     private fInput inputCtrl;
     private bool playerHasLanded;
@@ -34,10 +35,6 @@ public class HealthDepletion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        if(inputCtrl.reset)
-        {
-            healthVal = maxHealth;
-        }
         healthVal = Mathf.Clamp(healthVal, 0, maxHealth);
 		healthBar.value = healthVal;
 
@@ -54,6 +51,7 @@ public class HealthDepletion : MonoBehaviour {
 
 	}
 
+/* THESE FUNCTIONS HAVE BEEN REPLACED BY handleHealth()
 	public void RemoveHealth(int dmg, bool removeChunk)
     { 
         //  removeChunk = dmg removes a chunk or percentage of max health from current health
@@ -80,6 +78,7 @@ public class HealthDepletion : MonoBehaviour {
             healthVal += heal;
         }
     }
+*/
 
     //JK~~
     //handles all health, removing or adding
@@ -100,7 +99,7 @@ public class HealthDepletion : MonoBehaviour {
     //resets values
     public void resetHealth()
     {
-        healthVal = 100;
+        healthVal = maxHealth;
     }
 
 	void OnCollisionEnter(Collision col)
@@ -108,7 +107,7 @@ public class HealthDepletion : MonoBehaviour {
 		// needs to be changed to check for floor
         if(pCtrl.isGrounded && col.gameObject.tag != "safe")
         {
-            RemoveHealth(baseDmg, true);
+            handleHealth(-1, true);
         }
 
 	}

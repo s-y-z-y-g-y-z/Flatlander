@@ -21,25 +21,28 @@ public class Reset : MonoBehaviour {
     //PUBLIC vals
     public bool resetLevel;
 	public bool harderReset;
+    public bool hitGround;
 
 	// Use this for initialization
 	void Start () {
 		inputCtrl = FindObjectOfType<fInput>();
 		pCtrl = FindObjectOfType<SideScrollController>();
+        hitGround = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//hardReset ();
+		//hardReset();
 	}
 
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Player") {
-            gm.resetScene();
+            hitGround = true;
 		}
 	}
-	/*
+
+/*
 	void startReset()
 	{
 		if (inputCtrl.reset)
@@ -52,9 +55,10 @@ public class Reset : MonoBehaviour {
 		{
 			resetLevel = false;
 		}
-	}*/
+	}
+*/
     
-    /*
+/*
     //JK~~ function moved to the GM
     //function to reset the scene
     public void resetScene()
@@ -64,15 +68,13 @@ public class Reset : MonoBehaviour {
         pCtrl.playerRb.velocity = Vector3.zero;
         hd.healthVal = 100;
     }
-    */
+*/
 
 	void hardReset()
 	{
 		if (harderReset)
 		{
 			//Application.LoadLevel (Application.loadedLevel);
-
-
 		}
 	}
 }

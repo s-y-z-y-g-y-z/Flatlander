@@ -19283,6 +19283,7 @@ MonoBehaviour:
   characterGameObj: {fileID: 1986558084}
   gunObj: {fileID: 773551757}
   rightShoulder: {fileID: 1574581654}
+  gm: {fileID: 924057051}
   fallMultiplier: 1.5
   jumpFallMultiplier: 1
   groundAccelerationPower: 35

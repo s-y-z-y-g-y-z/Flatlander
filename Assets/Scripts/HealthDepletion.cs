@@ -40,6 +40,12 @@ public class HealthDepletion : MonoBehaviour {
         }
         healthVal = Mathf.Clamp(healthVal, 0, maxHealth);
 		healthBar.value = healthVal;
+
+        //keeps 
+        if(healthVal > maxHealth)
+        {
+            healthVal = maxHealth;
+        }
 	}
 
 	//algorithm for health depletion
@@ -48,9 +54,11 @@ public class HealthDepletion : MonoBehaviour {
 
 	}
 
-	public void RemoveHealth(int dmg, bool removeChunk) //  removeChunk = dmg removes a chunk or percentage of max health from current health
-    {                                                   //  !removeChunk = dmg removes individual health units
-        if (removeChunk)
+	public void RemoveHealth(int dmg, bool removeChunk)
+    { 
+        //  removeChunk = dmg removes a chunk or percentage of max health from current health
+        //  !removeChunk = dmg removes individual health units
+        if (removeChunk && healthVal > 0)
         {
             healthVal -= maxHealth / healthChunks;
         }
@@ -63,13 +71,28 @@ public class HealthDepletion : MonoBehaviour {
 
     public void AddHealth(int heal, bool healChunk)
     {
-        if (healChunk)
+        if (healChunk && healthVal < 100)
         {
             healthVal += maxHealth / healthChunks;
         }
         else
         {
             healthVal += heal;
+        }
+    }
+
+    //JK~~
+    //handles all health, removing or adding
+    //healthMod: + for healing, - for damage. If useChunks, healthmod = # of chunks
+    public void handleHealth(int healthMod, bool useChunks)
+    {
+        if (useChunks && healthVal < maxHealth)
+        {
+            healthVal += (maxHealth / healthChunks) * healthMod;
+        }
+        else
+        {
+            healthVal += healthMod;
         }
     }
 		

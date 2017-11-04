@@ -14,6 +14,8 @@ public class Collect : MonoBehaviour {
 
     //PUBLIC SCRIPT REFERENCES
     public GM gm;
+    public HealthDepletion hd;
+    public SideScrollController pCtrl;
 
     private void Start()
     {
@@ -22,19 +24,45 @@ public class Collect : MonoBehaviour {
 
     private void Update()
     {
-        if(tag == "Collectable")
+        rotateBox();
+    }
+
+    //rotates the mesh, not the collider
+    public void rotateBox()
+    {
+        if (tag == "Collectable")
         {
             transform.Rotate(Vector3.up * Time.deltaTime * 60, Space.World);
         }
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        //handles collectible count, then special collectible attribute, then the object deactivates
         if (other.gameObject.tag == "Player" && tag == "CollectableCollider")
         {
-            gm.HandleScore(1);
-            gameObject.SetActive(false);
+            gm.HandleColScore(1);
+
+            if(transform.parent.tag == "normieCollectible")
+            {
+                //normie special TBD
+            }
+            else if(transform.parent.tag == "healCollectible")
+            {
+                hd.handleHealth(1, true);
+            }
+            else if(transform.parent.tag == "scoreCollectible")
+            {
+                gm.HandleBonusColScore();
+            }
+            else if(transform.parent.tag == "dmgCollectible")
+            {
+                //possible hurtful collectible
+            }
+
+            transform.parent.gameObject.SetActive(false);
         }
     }
+
+    
 }

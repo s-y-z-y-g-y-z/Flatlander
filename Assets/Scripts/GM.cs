@@ -22,7 +22,8 @@ public class GM : MonoBehaviour
 
     //PUBLIC ATTRIBUTES
     public bool resetLevel;
-    public float collScore;
+    public float colScore;
+    public float scoreColCount;
     public float totalScore;
     public int healthVal;
     public bool isDead;
@@ -83,9 +84,14 @@ public class GM : MonoBehaviour
     }
 
     //adds value to score
-    public void HandleScore(float value)
+    public void HandleColScore(float value)
     {
-        collScore += value;
+        colScore += value;
+    }
+
+    public void HandleBonusColScore()
+    {
+        scoreColCount++;
     }
 
     //checks if the player is dead
@@ -132,7 +138,7 @@ public class GM : MonoBehaviour
         {
             roundedTimer = 0;
         }
-        totalScore = roundedTimer + (collScore * 1500);
+        totalScore = roundedTimer + (colScore * 1500) + (scoreColCount * 3000);
         return totalScore;
     }
 }

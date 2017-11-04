@@ -11,6 +11,9 @@ TagManager:
   - Collectable
   - Hook
   - CollectableCollider
+  - normieCollectible
+  - healCollectible
+  - scoreCollectible
   layers:
   - Default
   - TransparentFX

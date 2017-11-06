@@ -27,7 +27,9 @@ public class Reset : MonoBehaviour {
 	void Start () {
 		inputCtrl = FindObjectOfType<fInput>();
 		pCtrl = FindObjectOfType<SideScrollController>();
-        hitGround = false;
+        hd = FindObjectOfType<HealthDepletion>();
+        gm = FindObjectOfType<GM>();
+        //hitGround = false;
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,7 @@ public class Reset : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Player") {
-            hitGround = true;
+            gm.touchHazard = true;                                               // hitGround = true;
 		}
 	}
 

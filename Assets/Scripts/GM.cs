@@ -16,7 +16,6 @@ public class GM : MonoBehaviour
     private fInput inputCtrl;
     public ParameterScreen ps;
     public HealthDepletion hd;
-    public Reset res;
     public GrappleController gCtrl;
     public WinArea winArea;
 
@@ -125,11 +124,11 @@ public class GM : MonoBehaviour
         {
             ps.isPaused = false;
         }
-        if (res.hitGround)
+        /*if (res.hitGround)   NO LONGER IN USE 
         {
             
             res.hitGround = false;
-        }
+        }*/
 
         winArea.win = false;
     }

@@ -33,8 +33,9 @@ public class Rock_Fall : MonoBehaviour {
     // checks for collision with hook/grapple
 	void OnCollisionEnter(Collision col)
 	{
-
-		if (col.gameObject.CompareTag("Hook")) {
+        Vector3 velocity = col.relativeVelocity;
+        if (col.gameObject.CompareTag("Hook")) {
+            Debug.Log("Velocity vector is: " + velocity);
 			StartCoroutine (Fall());
 		}
 	} 

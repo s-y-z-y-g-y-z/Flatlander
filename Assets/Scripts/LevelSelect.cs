@@ -16,7 +16,8 @@ using UnityEngine.SceneManagement;
 public class LevelSelect : MonoBehaviour {
 
 	public Button level1;
-	public Button test;
+	public Button level2;
+    public Button level3;
 	public Button back;
 
 	public Canvas menu;
@@ -26,24 +27,30 @@ public class LevelSelect : MonoBehaviour {
 		Button btn = level1.GetComponent<Button> ();
 		btn.onClick.AddListener(Load1);
 
-		btn = test.GetComponent<Button> ();
-		btn.onClick.AddListener (LoadTest);
+		btn = level2.GetComponent<Button> ();
+		btn.onClick.AddListener (Load2);
 
-		btn = back.GetComponent<Button> ();
+        btn = level3.GetComponent<Button>();
+        btn.onClick.AddListener(Load3);
+
+        btn = back.GetComponent<Button> ();
 		btn.onClick.AddListener (GoBack);
 	}
-
-	// loads level 1 aka proto
 	void Load1()
 	{
-		SceneManager.LoadScene ("proto");
+		SceneManager.LoadScene ("Tutorial");
 	}
 
 	// loads test scene
-	void LoadTest()
+	void Load2()
 	{
-		SceneManager.LoadScene ("Playtest level");
+		SceneManager.LoadScene ("Proto2");
 	}
+
+    void Load3()
+    {
+        SceneManager.LoadScene("World3");
+    }
 
 	//go back to main menu screen
 	void GoBack()

@@ -770,6 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: {fileID: 23799843}
+  seconds: 2
 --- !u!64 &23799845
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21976,6 +21977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: {fileID: 1764661790}
+  seconds: 2
 --- !u!54 &1764661793
 Rigidbody:
   m_ObjectHideFlags: 0

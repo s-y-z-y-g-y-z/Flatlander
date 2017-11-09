@@ -14,6 +14,8 @@ TagManager:
   - normieCollectible
   - healCollectible
   - scoreCollectible
+  - Fire
+  - Hazard
   layers:
   - Default
   - TransparentFX

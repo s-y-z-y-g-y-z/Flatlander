@@ -14,7 +14,7 @@ public class ObjectSpawn : MonoBehaviour {
 	
     IEnumerator Stuff()
     {
-        for (int i = 0; i < max; i++)
+        for (int i = 0; i <= max; i++)
         {
             yield return new WaitForSeconds(spawnRate);
             Instantiate(obj, transform.position, transform.rotation);

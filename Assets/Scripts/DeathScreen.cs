@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /*
  * USED
@@ -41,6 +42,6 @@ public class DeathScreen : MonoBehaviour {
 
     public void buttonMenu()
     {
-
+		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Single);
     }
 }

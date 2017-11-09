@@ -28,6 +28,8 @@ public class SideScrollController : MonoBehaviour
     public GameObject characterGameObj;
     public GameObject gunObj;
     public Transform rightShoulder;
+    public GM gm;
+
     //Multipliers for movement values
     [Header("Movement Modifiers")]
     public float fallMultiplier = 1.5f;
@@ -123,7 +125,7 @@ public class SideScrollController : MonoBehaviour
         lookPos = inputCtrl.lookPos;
         if(inputCtrl.reset)
         {
-            resetPosition();
+            gm.resetScene();
         }
         horizontal = inputCtrl.horizontal;
         vertical = inputCtrl.vertical;

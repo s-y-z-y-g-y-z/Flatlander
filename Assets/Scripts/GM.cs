@@ -16,7 +16,6 @@ public class GM : MonoBehaviour
     private fInput inputCtrl;
     public ParameterScreen ps;
     public HealthDepletion hd;
-    public Reset res;
     public GrappleController gCtrl;
     public WinArea winArea;
 
@@ -26,10 +25,12 @@ public class GM : MonoBehaviour
     public float scoreColCount;
     public float totalScore;
     public int healthVal;
+    public bool touchHazard;
     public bool isDead;
     public Text clock;
     public GameObject ks;
     public GameObject ws;
+
 
     private float timer;
     private float roundedTimer;
@@ -39,6 +40,7 @@ public class GM : MonoBehaviour
 	void Start ()
     {
         isDead = false;
+        touchHazard = false;
         inputCtrl = FindObjectOfType<fInput>();
         pCtrl = FindObjectOfType<SideScrollController>();
         healthVal = hd.healthVal;
@@ -97,7 +99,7 @@ public class GM : MonoBehaviour
     //checks if the player is dead
     public void checkDead()
     {
-        if(healthVal <= 0 || inputCtrl.reset)
+        if(healthVal <= 0 || inputCtrl.reset || touchHazard) 
         {
             isDead = true;
         }
@@ -114,11 +116,19 @@ public class GM : MonoBehaviour
         pCtrl.transform.position = pCtrl.initPlayerPos;
         pCtrl.playerRb.velocity = Vector3.zero;
         hd.healthVal = 100;
-
+        scoreColCount = 0;
+        totalScore = 0;
+        timer = startTime;
+        touchHazard = false;
         if (ps.isPaused)
         {
             ps.isPaused = false;
         }
+        /*if (res.hitGround)   NO LONGER IN USE 
+        {
+            
+            res.hitGround = false;
+        }*/
 
         winArea.win = false;
     }
@@ -138,7 +148,14 @@ public class GM : MonoBehaviour
         {
             roundedTimer = 0;
         }
+
         totalScore = roundedTimer + (colScore * 1500) + (scoreColCount * 3000);
         return totalScore;
+
+    }
+
+    public void kill()
+    {
+        isDead = true;
     }
 }

@@ -220,15 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\eInput.cs" />
-    <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\CamFollow.cs" />
     <Compile Include="Assets\Scripts\Collect.cs" />
-    <Compile Include="Assets\Scripts\CollectableSpin.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\DeathScreen.cs" />
-    <Compile Include="Assets\Scripts\EnvAttributes.cs" />
-    <Compile Include="Assets\Scripts\EnvSnap.cs" />
     <Compile Include="Assets\Scripts\fInput.cs" />
     <Compile Include="Assets\Scripts\GM.cs" />
     <Compile Include="Assets\Scripts\GrappleController.cs" />
@@ -236,18 +231,20 @@
     <Compile Include="Assets\Scripts\HealthDepletion.cs" />
     <Compile Include="Assets\Scripts\HitBoxShift.cs" />
     <Compile Include="Assets\Scripts\HookController.cs" />
-    <Compile Include="Assets\Scripts\HUD.cs" />
     <Compile Include="Assets\Scripts\IKHandler.cs" />
-    <Compile Include="Assets\Scripts\Launch_hook.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ObjectScaler.cs" />
-    <Compile Include="Assets\Scripts\OneNodeRope.cs" />
+    <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\ParameterScreen.cs" />
     <Compile Include="Assets\Scripts\Platform_Move.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\Rock_Fall.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Rope.cs" />
+=======
+    <Compile Include="Assets\Scripts\ScoreHandler.cs" />
+>>>>>>> test
     <Compile Include="Assets\Scripts\SideScrollController.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
     <Compile Include="Assets\Scripts\WeponRecoil.cs" />

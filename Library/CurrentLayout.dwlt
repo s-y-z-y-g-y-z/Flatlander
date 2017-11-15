@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 342}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 458
+  controlID: 16011
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 544
+  controlID: 15984
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,9 +263,8 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
-  - {fileID: 21}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -369,14 +368,14 @@ MonoBehaviour:
     width: 1142
     height: 647
   m_SceneLighting: 1
-  lastFramingTime: 4751.795625546738
+  lastFramingTime: 2123.770259801082
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -101.98956, y: -16.644608, z: -0.03125}
+    m_Target: {x: -162.38, y: -40.5, z: -0.319}
     speed: 2
-    m_Value: {x: -101.98956, y: -16.644608, z: -0.03125}
+    m_Value: {x: -162.38, y: -40.5, z: -0.319}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -403,9 +402,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 779.87805
+    m_Target: 22
     speed: 2
-    m_Value: 779.87805
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -547,9 +546,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 20510000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 4c69ffff00000000
+    m_SelectedIDs: 306b0200
+    m_LastClickedID: 158512
+    m_ExpandedIDs: 32def7ff6820f8ffa82af9fff4e0faffaae0fdff98e9fdff1c6affff8c72ffff52eaffffa6fbffff000000006e41000094490000384f000022740000fc7600000a770000ac770000027d0000d2160200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,19 +609,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/UI/NEW_UI
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/UI/NEW_UI
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\soadr\Documents\GitHub\Flatlander
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f44e0000
-    m_LastClickedID: 20212
-    m_ExpandedIDs: 00000000682b0000d02b00005e310000343e0000703e0000863e0000a03e0000b83e00008c3f0000e03f000012400000444000005440000090400000964000009e400000ac400000ec400000624e000000ca9a3bffffff7f
+    m_SelectedIDs: 562b0000
+    m_LastClickedID: 11094
+    m_ExpandedIDs: 000000006227000088270000e62700001a28000074280000882900009c290000b0290000122a0000562b0000a42b0000be2b0000f42b00003c2c0000542c00005e2c0000782c0000082e00000c2e0000bc3f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -650,7 +649,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000682b0000d02b00005e310000343e0000703e0000863e0000a03e0000b83e00008c3f0000e03f000012400000444000005440000090400000964000009e400000ac400000ec400000624e000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000006227000088270000e62700001a28000074280000882900009c290000b0290000122a0000562b0000a42b0000be2b0000f42b00003c2c0000542c00005e2c0000782c0000082e00000c2e0000bc3f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -677,8 +676,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000baa9ffffc493ffff084a0000284a0000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000baa9ffffc493ffff084a0000284a00002af5faff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +730,7 @@ MonoBehaviour:
     y: 92
     width: 336
     height: 926
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 1800}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 201
@@ -759,46 +758,17 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1575
+    x: 1584
     y: 92
-    width: 345
+    width: 336
     height: 926
-  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/build
   m_GlobalObjectTypeName: 
   m_RegisteredViewURLs:
   - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   - https://public-cdn.cloud.unity3d.com/editor/production/cloud/collab
+  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/build
   m_RegisteredViewInstances:
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12158, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Collab History
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 1594
-    y: 100
-    width: 316
-    height: 910
-  m_InitialOpenURL: file:///C:/Users/soadr/AppData/Roaming/Unity/Packages/node_modules/unityeditor-collab-history/dist/index.html
-  m_GlobalObjectTypeName: 
-  m_RegisteredViewURLs:
-  - file:///C:/Users/bspur/AppData/Roaming/Unity/Packages/node_modules/unityeditor-collab-history/dist/index.html
-  m_RegisteredViewInstances:
   - {fileID: 0}

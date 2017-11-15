@@ -238,6 +238,7 @@
     <Compile Include="Assets\Scripts\ObjectScaler.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\ParameterScreen.cs" />
+    <Compile Include="Assets\Scripts\PauseScreen.cs" />
     <Compile Include="Assets\Scripts\Platform_Move.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\Rock_Fall.cs" />

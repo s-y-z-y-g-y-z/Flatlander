@@ -35,20 +35,20 @@ public class Platform_Move : MonoBehaviour {
 		
 	}
 
-	void OnCollisionStay(Collision other){
+	//void OnCollisionStay(Collision other){
 
-		if(other.gameObject.tag == "Player"){
-			other.transform.parent = transform;
+	//	if(other.gameObject.tag == "Player"){
+	//		other.transform.parent = transform;
 
 			
 
-		}
-	}
+	//	}
+	//}
 
-	void OnCollisionExit(Collision other){
-		if(other.gameObject.tag == "Player"){
-			other.transform.parent = null;
+	//void OnCollisionExit(Collision other){
+	//	if(other.gameObject.tag == "Player"){
+	//		other.transform.parent = null;
 
-		}
-	}  
+	//	}
+	//}  
 }

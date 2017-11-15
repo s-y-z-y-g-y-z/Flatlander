@@ -51,12 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DestroyHazard.cs" />
-     <Compile Include="Assets\eInput.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\DataController.cs" />
      <Compile Include="Assets\Scripts\DeathScreen.cs" />
+     <Compile Include="Assets\Scripts\DestroyHazard.cs" />
+     <Compile Include="Assets\Scripts\eInput.cs" />
      <Compile Include="Assets\Scripts\fInput.cs" />
      <Compile Include="Assets\Scripts\GM.cs" />
      <Compile Include="Assets\Scripts\GrappleController.cs" />
@@ -70,19 +70,22 @@
      <Compile Include="Assets\Scripts\ObjectScaler.cs" />
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\ParameterScreen.cs" />
+     <Compile Include="Assets\Scripts\PauseScreen.cs" />
      <Compile Include="Assets\Scripts\Platform_Move.cs" />
      <Compile Include="Assets\Scripts\Reset.cs" />
      <Compile Include="Assets\Scripts\Rock_Fall.cs" />
      <Compile Include="Assets\Scripts\ScoreHandler.cs" />
      <Compile Include="Assets\Scripts\SideScrollController.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\WeponRecoil.cs" />
      <Compile Include="Assets\Scripts\WinArea.cs" />
      <Compile Include="Assets\Scripts\WinScreen.cs" />
+     <None Include="Assets\UI\NEW_UI\Amatic_SC\OFL.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
-     <None Include="Assets\UI\Amatic_SC\OFL.txt" />
+     <None Include="Assets\UI\OLD_UI\Amatic_SC\OFL.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
-=======
-- path: Assets/Scenes/proto.unity
->>>>>>> refs/remotes/origin/test
   isLoaded: 1
   isActive: 1

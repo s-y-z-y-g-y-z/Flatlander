@@ -14,9 +14,9 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 44
+    y: 43
     width: 1920
-    height: 1036
+    height: 997
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
@@ -46,19 +46,12 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1920
-<<<<<<< HEAD
     height: 997
 <<<<<<< HEAD
   m_MinSize: {x: 950, y: 542}
 =======
-<<<<<<< HEAD
   m_MinSize: {x: 950, y: 521}
 >>>>>>> refs/remotes/origin/test
-=======
-    height: 1036
-  m_MinSize: {x: 950, y: 392}
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -96,7 +89,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1016
+    y: 977
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -120,7 +113,6 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1920
-<<<<<<< HEAD
     height: 947
 <<<<<<< HEAD
   m_MinSize: {x: 683, y: 492}
@@ -128,20 +120,11 @@ MonoBehaviour:
   vertical: 0
   controlID: 2881
 =======
-<<<<<<< HEAD
   m_MinSize: {x: 679, y: 471}
   m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
   controlID: 1533
 >>>>>>> refs/remotes/origin/test
-=======
-    height: 986
-  m_MinSize: {x: 917, y: 342}
-  m_MaxSize: {x: 22012, y: 10021}
-  vertical: 0
-  controlID: 17380
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +151,6 @@ MonoBehaviour:
   vertical: 1
   controlID: 2882
 =======
-<<<<<<< HEAD
     width: 1531
     height: 947
   m_MinSize: {x: 404, y: 471}
@@ -176,15 +158,6 @@ MonoBehaviour:
   vertical: 1
   controlID: 1534
 >>>>>>> refs/remotes/origin/test
-=======
-    width: 1144
-    height: 986
-  m_MinSize: {x: 202, y: 342}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 17381
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +184,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 2883
 =======
-<<<<<<< HEAD
     width: 1531
     height: 573
   m_MinSize: {x: 404, y: 221}
@@ -219,20 +191,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 1535
 >>>>>>> refs/remotes/origin/test
-=======
-    width: 1144
-    height: 695
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 13}
-  - {fileID: 14}
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +206,6 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 0
 <<<<<<< HEAD
     width: 216
@@ -258,12 +215,6 @@ MonoBehaviour:
     height: 573
 >>>>>>> refs/remotes/origin/test
   m_MinSize: {x: 202, y: 221}
-=======
-    y: 695
-    width: 1144
-    height: 291
-  m_MinSize: {x: 102, y: 121}
->>>>>>> test
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
@@ -289,12 +240,6 @@ MonoBehaviour:
     y: 0
     width: 1425
     height: 671
-=======
-    x: 1144
-    y: 0
-    width: 204
-    height: 986
->>>>>>> test
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 12}
@@ -334,7 +279,6 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 671
@@ -343,15 +287,6 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 16}
-=======
-    x: 1348
-    y: 0
-    width: 234
-    height: 986
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
-  m_ActualView: {fileID: 18}
->>>>>>> test
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
@@ -390,15 +325,6 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
-=======
-    x: 1582
-    y: 0
-    width: 338
-    height: 986
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
->>>>>>> test
   m_Panes:
   - {fileID: 18}
 =======
@@ -442,19 +368,11 @@ MonoBehaviour:
     width: 1421
     height: 650
 =======
-<<<<<<< HEAD
     x: 381
     y: 19
     width: 1148
     height: 552
 >>>>>>> refs/remotes/origin/test
-=======
-    x: 0
-    y: 714
-    width: 1142
-    height: 270
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
@@ -469,19 +387,11 @@ MonoBehaviour:
     m_VBaseRangeMin: -316.5
     m_VBaseRangeMax: 316.5
 =======
-<<<<<<< HEAD
     m_HBaseRangeMin: -960
     m_HBaseRangeMax: 960
     m_VBaseRangeMin: -454.5
     m_VBaseRangeMax: 454.5
 >>>>>>> refs/remotes/origin/test
-=======
-    m_HBaseRangeMin: -842.6667
-    m_HBaseRangeMax: 842.6667
-    m_VBaseRangeMin: -474
-    m_VBaseRangeMax: 474
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -505,17 +415,10 @@ MonoBehaviour:
     m_Translation: {x: 710.5, y: 316.5}
 =======
       width: 1920
-<<<<<<< HEAD
       height: 909
     m_Scale: {x: 1.0609, y: 1.0609}
     m_Translation: {x: 963.37854, y: 456.32565}
 >>>>>>> refs/remotes/origin/test
-=======
-      height: 948
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 960, y: 474}
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -528,19 +431,11 @@ MonoBehaviour:
       width: 1421
       height: 633
 =======
-<<<<<<< HEAD
       x: -908.0767
       y: -430.1307
       width: 1809.7842
       height: 856.8197
 >>>>>>> refs/remotes/origin/test
-=======
-      x: -960
-      y: -474
-      width: 1920
-      height: 948
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -548,13 +443,8 @@ MonoBehaviour:
 <<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1421, y: 650}
 =======
-<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1920, y: 926}
 >>>>>>> refs/remotes/origin/test
-=======
-  m_LastWindowPixelSize: {x: 1920, y: 965}
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -655,7 +545,6 @@ MonoBehaviour:
   m_SceneLighting: 1
   lastFramingTime: 157.56495139758792
 =======
-<<<<<<< HEAD
     x: 381
     y: 92
     width: 1148
@@ -663,15 +552,6 @@ MonoBehaviour:
   m_SceneLighting: 1
   lastFramingTime: 304.3259035485063
 >>>>>>> refs/remotes/origin/test
-=======
-    x: 0
-    y: 93
-    width: 1142
-    height: 674
-  m_SceneLighting: 1
-  lastFramingTime: 4751.795625546738
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
@@ -681,17 +561,10 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -171.79323, y: -42.69484, z: 0.005859375}
 =======
-<<<<<<< HEAD
     m_Target: {x: -160.43091, y: -34.81889, z: 5.469693}
     speed: 2
     m_Value: {x: -160.43091, y: -34.81889, z: 5.469693}
 >>>>>>> refs/remotes/origin/test
-=======
-    m_Target: {x: -101.98956, y: -16.644608, z: -0.03125}
-    speed: 2
-    m_Value: {x: -101.98956, y: -16.644608, z: -0.03125}
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -723,7 +596,6 @@ MonoBehaviour:
     speed: 2
     m_Value: 3.0246434
 =======
-<<<<<<< HEAD
     m_Target: {x: -0.015215926, y: -0.11016635, z: 0.0016852928, w: -0.99380374}
     speed: 2
     m_Value: {x: -0.015215799, y: -0.11016543, z: 0.0016852787, w: -0.99379545}
@@ -732,16 +604,6 @@ MonoBehaviour:
     speed: 2
     m_Value: 41.52204
 >>>>>>> refs/remotes/origin/test
-=======
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
-    speed: 2
-    m_Value: {x: -0, y: 0, z: -0, w: -1}
-  m_Size:
-    m_Target: 128.87605
-    speed: 2
-    m_Value: 128.87605
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -871,88 +733,6 @@ MonoBehaviour:
   m_Enabled: 1
 >>>>>>> refs/remotes/origin/test
   m_EditorHideFlags: 1
-<<<<<<< HEAD
-=======
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 788
-    width: 1142
-    height: 270
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Hierarchy
-    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 1146
-    y: 93
-    width: 200
-    height: 965
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e0a80400
-    m_LastClickedID: 305376
-    m_ExpandedIDs: c615f2ff8621f2ff2035f2ff8050f2ffe65df2ff3228f5ff483cf5ffc64ff5ff6009f7ff3e21f7ff862ef7ff283af7ff4048f7ffa451f7ff928cf7ffa2b7f7ff4cc3f7ffb0f2f7fff002f8ff626ff8ffb081f8ffe08df8ff34c3f8ff240cf9ff0221fbff0421fbff0aebfbffbeeefcffdcfcfcff7257feff5e6efeff8054ffff00000000704400003c4700006c470000005b00007a5d0000ba5e0000dab1000022ba0000944b0100604e0100664f01004e010200d01d0200081f02006c5a0200a85b0200807e0200688102009c9c0200f6a402001804030010080300b0860300e0a8040020b10400
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 9}
-    m_SearchString: 
-  m_ExpandedScenes:
-  - World3
-  m_CurrenRootInstanceID: 0
-  m_Locked: 0
-  m_CurrentSortingName: TransformSorting
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
->>>>>>> test
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -967,25 +747,16 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 763
     width: 1639
     height: 255
 =======
-<<<<<<< HEAD
     y: 665
     width: 1529
     height: 353
 >>>>>>> refs/remotes/origin/test
-=======
-    x: 1350
-    y: 93
-    width: 230
-    height: 965
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -1013,7 +784,6 @@ MonoBehaviour:
     m_LastClickedID: 11118
     m_ExpandedIDs: 000000006027000086270000b2270000e82700002028000032280000202900003429000088290000a62a0000e82a0000222b00005a2b0000702b00008c2b0000fa2c0000722d0000cc430000
 =======
-<<<<<<< HEAD
     - Assets/Level_Tiles
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -1028,22 +798,6 @@ MonoBehaviour:
     m_LastClickedID: 12306
     m_ExpandedIDs: 00000000642700008a270000ea270000202800007e28000050290000a8290000bc290000d0290000362a0000f62a00007a2b0000ca2b0000e42b00001c2c00003e2c0000662c00007e2c0000882c00009c2c0000a22c0000362e00003a2e0000f02f000000ca9a3bffffff7f
 >>>>>>> refs/remotes/origin/test
-=======
-    - Assets/Scenes
-  m_ViewMode: 1
-  m_StartGridSize: 16
-  m_LastFolders:
-  - Assets/Scenes
-  m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\College\Junior\Fall\GMAP 377\Flatlander\Flatlander
-  m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38430000
-    m_LastClickedID: 17208
-    m_ExpandedIDs: 00000000ce2a0000362b0000c4300000264200006242000078420000a4420000ec4200000a430000384300006a4300007a430000b6430000bc430000c2430000d043000006440000d64f000000ca9a3bffffff7f
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1074,13 +828,8 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_ExpandedIDs: 000000006027000086270000b2270000e82700002028000032280000202900003429000088290000a62a0000e82a0000222b00005a2b0000702b00008c2b0000fa2c0000722d0000cc430000
 =======
-<<<<<<< HEAD
     m_ExpandedIDs: 00000000642700008a270000ea270000202800007e28000050290000a8290000bc290000d0290000362a0000f62a00007a2b0000ca2b0000e42b00001c2c00003e2c0000662c00007e2c0000882c00009c2c0000a22c0000362e00003a2e0000f02f000000ca9a3bffffff7f
 >>>>>>> refs/remotes/origin/test
-=======
-    m_ExpandedIDs: 00000000ce2a0000362b0000c4300000264200006242000078420000a4420000ec4200000a430000384300006a4300007a430000b6430000bc430000c2430000d043000006440000d64f000000ca9a3bffffff7f
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1109,17 +858,11 @@ MonoBehaviour:
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
-<<<<<<< HEAD
     m_ExpandedInstanceIDs: c623000096520000
 =======
-<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
 >>>>>>> refs/remotes/origin/test
-=======
-    m_ExpandedInstanceIDs: c6230000baa9ffffc493ffff084a0000284a0000
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1144,22 +887,14 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-<<<<<<< HEAD
     m_GridSize: 64
 <<<<<<< HEAD
   m_DirectoriesAreaWidth: 451
 --- !u!114 &17
 =======
-<<<<<<< HEAD
   m_DirectoriesAreaWidth: 115
 --- !u!114 &19
 >>>>>>> refs/remotes/origin/test
-=======
-    m_GridSize: 16
-  m_DirectoriesAreaWidth: 110
---- !u!114 &19
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1188,28 +923,12 @@ MonoBehaviour:
     height: 308
 --- !u!114 &18
 =======
-<<<<<<< HEAD
     x: 0
     y: 665
     width: 1529
     height: 353
 --- !u!114 &20
 >>>>>>> refs/remotes/origin/test
-=======
-    x: 1584
-    y: 93
-    width: 336
-    height: 965
-  m_ScrollPosition: {x: 0, y: 88.555176}
-  m_InspectorMode: 0
-  m_PreviewResizer:
-    m_CachedPref: 201
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &20
->>>>>>> test
->>>>>>> parent of 678c8f00... Revert "merging"
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1241,7 +960,6 @@ MonoBehaviour:
     width: 387
 >>>>>>> refs/remotes/origin/test
     height: 926
-<<<<<<< HEAD
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
@@ -1249,44 +967,3 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-=======
-  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
-  m_GlobalObjectTypeName: 
-  m_RegisteredViewURLs:
-  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
-  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/collab
-  m_RegisteredViewInstances:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12158, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Collab History
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 1594
-    y: 100
-    width: 316
-    height: 910
-  m_InitialOpenURL: file:///C:/Users/Joshua/AppData/Roaming/Unity/Packages/node_modules/unityeditor-collab-history/dist/index.html
-  m_GlobalObjectTypeName: 
-  m_RegisteredViewURLs:
-  - file:///C:/Users/bspur/AppData/Roaming/Unity/Packages/node_modules/unityeditor-collab-history/dist/index.html
-  m_RegisteredViewInstances:
-  - {fileID: 0}
->>>>>>> test

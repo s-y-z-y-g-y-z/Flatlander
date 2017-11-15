@@ -1,12 +1,8 @@
 sceneSetups:
 <<<<<<< HEAD
-<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
 =======
 - path: Assets/Scenes/proto.unity
 >>>>>>> refs/remotes/origin/test
-=======
-- path: Assets/Scenes/World3.unity
->>>>>>> parent of 678c8f00... Revert "merging"
   isLoaded: 1
   isActive: 1

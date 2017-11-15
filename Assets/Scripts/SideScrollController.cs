@@ -114,6 +114,7 @@ public class SideScrollController : MonoBehaviour
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
         isDead = false;
+        HandleRagdoll();
     }
     
     //for non-phsyics physics and calculations
@@ -375,6 +376,8 @@ public class SideScrollController : MonoBehaviour
         {
             isDead = !isDead;
         }
+
+
         if (isDead)
         {
             characterGameObj.transform.parent = null;
@@ -393,12 +396,6 @@ public class SideScrollController : MonoBehaviour
         }
         else
         {
-            characterGameObj.transform.parent = transform;
-            characterGameObj.transform.localPosition = Vector3.zero;
-            characterGameObj.transform.localRotation = Quaternion.identity;
-            playerCollider.enabled = true;
-            playerRb.isKinematic = false;
-            anim.enabled = true;
             foreach (Rigidbody rb in jointRbs)
             {
                 rb.interpolation = RigidbodyInterpolation.None;
@@ -408,6 +405,13 @@ public class SideScrollController : MonoBehaviour
             {
                 col.enabled = false;
             }
+            characterGameObj.transform.parent = transform;
+            characterGameObj.transform.localPosition = Vector3.zero;
+            characterGameObj.transform.localRotation = Quaternion.identity;
+            playerCollider.enabled = true;
+            playerRb.isKinematic = false;
+            anim.enabled = true;
+
         }
     }
     //COLLISION CHECKS

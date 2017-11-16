@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\GM.cs" />
      <Compile Include="Assets\Scripts\GrappleController.cs" />
      <Compile Include="Assets\Scripts\GunAim.cs" />
+     <Compile Include="Assets\Scripts\GunSight.cs" />
      <Compile Include="Assets\Scripts\HealthDepletion.cs" />
      <Compile Include="Assets\Scripts\HitBoxShift.cs" />
      <Compile Include="Assets\Scripts\HookController.cs" />

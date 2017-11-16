@@ -46,6 +46,7 @@ public class Collect : MonoBehaviour {
             if(transform.parent.tag == "normieCollectible")
             {
                 //normie special TBD
+				hd.handleHealth(5, false);
             }
             else if(transform.parent.tag == "healCollectible")
             {

@@ -55,8 +55,35 @@ public class GM : MonoBehaviour
     {
         healthVal = hd.healthVal;
         checkDead();
-        
+        handlePauses();
+    }
 
+    //adds value to score
+    public void HandleColScore(float value)
+    {
+        colScore += value;
+    }
+
+    public void HandleBonusColScore()
+    {
+        scoreColCount++;
+    }
+
+    //checks if the player is dead
+    public void checkDead()
+    {
+        if(healthVal <= 0 || inputCtrl.reset || touchHazard) 
+        {
+            isDead = true;
+        }
+        else
+        {
+            isDead = false;
+        }
+    }
+
+    public void handlePauses()
+    {
         if (isDead)
         {
             ks.SetActive(true);
@@ -82,30 +109,6 @@ public class GM : MonoBehaviour
             ws.SetActive(false);
             pCtrl.isDead = false;
             updateClock();
-        }
-    }
-
-    //adds value to score
-    public void HandleColScore(float value)
-    {
-        colScore += value;
-    }
-
-    public void HandleBonusColScore()
-    {
-        scoreColCount++;
-    }
-
-    //checks if the player is dead
-    public void checkDead()
-    {
-        if(healthVal <= 0 || inputCtrl.reset || touchHazard) 
-        {
-            isDead = true;
-        }
-        else
-        {
-            isDead = false;
         }
     }
     

@@ -42,13 +42,13 @@ public class LevelSelect : MonoBehaviour {
 	}
 	void Load1()
 	{
-		SceneManager.LoadScene ("BaseScene");
+		SceneManager.LoadScene ("Tutorial");
 	}
 
 	// loads test scene
 	void Load2()
 	{
-		SceneManager.LoadScene ("World4");
+		SceneManager.LoadScene ("Proto2");
 	}
 
     void Load3()

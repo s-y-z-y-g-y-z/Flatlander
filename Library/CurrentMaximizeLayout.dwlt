@@ -24,16 +24,20 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1920
     height: 986
   m_MinSize: {x: 909, y: 442}
   m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
   controlID: 14805
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     width: 1440
@@ -62,6 +66,8 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -88,14 +94,18 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 0
     y: 693
     width: 1032
     height: 291
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     x: 286
@@ -114,6 +124,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
@@ -186,16 +198,20 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1034
     height: 986
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 14806
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     width: 1148
@@ -224,6 +240,8 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,6 +250,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,6 +290,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -283,10 +304,13 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1034
     height: 674
   m_MinSize: {x: 202, y: 221}
@@ -294,6 +318,7 @@ MonoBehaviour:
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     width: 284
@@ -518,6 +543,8 @@ MonoBehaviour:
   - {fileID: 10}
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -546,16 +573,20 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 0
     y: 93
     width: 1032
     height: 653
   m_SceneLighting: 1
   lastFramingTime: 3641.490191287171
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     x: 286
@@ -567,6 +598,8 @@ MonoBehaviour:
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
@@ -574,6 +607,7 @@ MonoBehaviour:
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     m_Target: {x: -5.2877746, y: 14.423242, z: 69.33396}
@@ -613,6 +647,8 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -627,16 +663,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: -0.030304579, y: 0.0065943836, z: -0.0002003395, w: -0.9995244}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -649,11 +686,14 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
     m_Target: 31.380377
     speed: 2
     m_Value: 31.380377
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     m_Value: {x: -0.030304413, y: 0.0065943473, z: -0.00020033841, w: -0.99951893}
@@ -676,11 +716,14 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -691,6 +734,9 @@ MonoBehaviour:
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+=======
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -766,10 +812,13 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1034
     y: 0
     width: 204
@@ -777,6 +826,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 9}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     x: 0
@@ -801,6 +851,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Panes:
   - {fileID: 9}
   m_Selected: 0
@@ -875,14 +927,18 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1238
     y: 0
     width: 268
     height: 986
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     x: 0
@@ -901,6 +957,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
@@ -909,6 +967,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   m_LastSelected: 1
@@ -922,6 +981,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -947,14 +1008,18 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1240
     y: 93
     width: 264
     height: 965
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     x: 0
@@ -979,6 +1044,8 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -991,6 +1058,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1025,6 +1093,12 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\College\Junior\Fall\GMAP 377\Flatlander\Flatlander
@@ -1034,6 +1108,7 @@ MonoBehaviour:
     m_SelectedIDs: 64570000
     m_LastClickedID: 22372
     m_ExpandedIDs: 00000000a02d00000c2e00007c560000005700002e5700004257000044570000b2570000e2570000fa570000fe5700004258000086580000ae580000d8580000fa58000016590000185900006a5900006c5900007059000076590000a0600000a260000000ca9a3bffffff7f
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   - Assets/_Assets/_Prefabs/Environment
@@ -1071,6 +1146,8 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1104,6 +1181,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
@@ -1127,6 +1205,9 @@ MonoBehaviour:
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+    m_ExpandedIDs: 00000000a02d00000c2e00007c560000005700002e5700004257000044570000b2570000e2570000fa570000fe5700004258000086580000ae580000d8580000fa58000016590000185900006a5900006c5900007059000076590000a0600000a260000000ca9a3bffffff7f
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1157,16 +1238,20 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_SelectedInstanceIDs: cef6fdff
     m_LastClickedInstanceID: -133426
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 324500001e54000034530000
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     m_SelectedInstanceIDs: 38b5fcff30b5fcff28b5fcff
@@ -1185,6 +1270,8 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1209,6 +1296,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1264,6 +1352,11 @@ MonoBehaviour:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+    m_GridSize: 16
+  m_DirectoriesAreaWidth: 124
+--- !u!114 &12
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}

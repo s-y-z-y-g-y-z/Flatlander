@@ -1997,6 +1997,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 9db28875... reversion again because why the fuck not
 =======
@@ -2185,6 +2186,8 @@ Transform:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &286647398
 Prefab:
   m_ObjectHideFlags: 0
@@ -4707,6 +4710,7 @@ Transform:
   m_RootOrder: 10
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536711972
@@ -4747,6 +4751,8 @@ Transform:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543688744
 GameObject:
@@ -5379,6 +5385,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5416,6 +5423,8 @@ Transform:
   m_LocalRotation: {x: 0.11177549, y: 0.0737352, z: -0.27846205, w: 0.9510669}
   m_LocalPosition: {x: 0.10707332, y: -0.029443942, z: -0.010821433}
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -7465,6 +7474,7 @@ MeshFilter:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
@@ -7507,6 +7517,8 @@ Transform:
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 =======
 >>>>>>> parent of ab4ebbeb... reversion to old because broke
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &879415004
 Prefab:
   m_ObjectHideFlags: 0
@@ -10174,75 +10186,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-<<<<<<< HEAD
-=======
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1245023540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1576909821914062, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1245023541}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_RightHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1245023541
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4456387569366908, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1245023540}
-  m_LocalRotation: {x: -1.2325952e-32, y: 6.123234e-17, z: 0, w: 1}
-  m_LocalPosition: {x: 0.273192, y: 0, z: 0.023446621}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1118424562}
-  - {fileID: 325685211}
-  - {fileID: 1496723538}
-  - {fileID: 2051122488}
-  - {fileID: 583659135}
-  m_Father: {fileID: 259413700}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1247696529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1082215223330524, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1247696530}
-  m_Layer: 0
-  m_Name: Character1_Reference
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1247696530
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4811701291008528, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1247696529}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1258061162}
-  m_Father: {fileID: 164979402}
-  m_RootOrder: 2
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253917594
 GameObject:

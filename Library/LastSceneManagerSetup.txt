@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/Scenes/World4.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/Tutorial.unity
+=======
+- path: Assets/Scenes/Test.unity
+>>>>>>> 9a17c25147367ba58d58d4f94d91fdec2edbdc15
   isLoaded: 1
   isActive: 1

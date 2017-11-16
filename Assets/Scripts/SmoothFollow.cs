@@ -35,6 +35,14 @@ public class SmoothFollow : MonoBehaviour
     public bool target2Snap;
     public bool onTarget1 = true;
 
+    private void Start()
+    {
+        if(target1==null)
+        {
+            target1 = FindObjectOfType<SideScrollController>().transform;
+        }
+    }
+
     //INCOMPLETE
     void Update()
     {

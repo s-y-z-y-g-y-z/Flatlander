@@ -68,8 +68,18 @@ public class fInput : MonoBehaviour {
 
         if (!isPaused)
         {
+            if (!pCtrl.isDead)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
             isShooting = Input.GetButtonDown("Fire1");
             isJumping = Input.GetButtonDown("Jump");
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
 		if (Input.GetButtonDown ("Perspective Shift")) {

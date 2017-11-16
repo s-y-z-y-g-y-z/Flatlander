@@ -525,12 +525,12 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 287
+      value: 313
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 161.5
+      value: 176
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -992,7 +992,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4964417578794688, guid: d4f4b25bf64066248a84badfd61807d5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114790879083485162, guid: d4f4b25bf64066248a84badfd61807d5,
         type: 2}
@@ -5504,9 +5504,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b468f85ab72414485be31698e58523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputCtrl: {fileID: 0}
-  pCtrl: {fileID: 0}
-  jumpSmoke: {fileID: 0}
+  inputCtrl: {fileID: 603682241}
+  pCtrl: {fileID: 1982441704}
+  jumpPEs: {fileID: 1469677963237704, guid: 3738dfc603e85f04087bc5f31aa2ed1b, type: 2}
+  landingPEs: {fileID: 1426453787435522, guid: 068c297849ab645458689667346237f4, type: 2}
+  playerVel: {x: 0, y: 0, z: 0}
 --- !u!1 &1338843902
 GameObject:
   m_ObjectHideFlags: 0

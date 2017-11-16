@@ -1,8 +1,12 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/TutTut.unity
 =======
 - path: Assets/Scenes/World4.unity
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+- path: Assets/Scenes/BaseScene.unity
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   isLoaded: 1
   isActive: 1

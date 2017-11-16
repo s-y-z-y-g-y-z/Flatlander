@@ -2333,6 +2333,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &266117177
 Prefab:
@@ -2517,6 +2518,8 @@ Transform:
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
 =======
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &286647398
 Prefab:
   m_ObjectHideFlags: 0
@@ -6034,6 +6037,7 @@ Transform:
 <<<<<<< HEAD
   m_RootOrder: 10
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   m_RootOrder: 9
@@ -6076,6 +6080,8 @@ Transform:
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
 =======
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543688744
 GameObject:
@@ -6876,6 +6882,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6913,6 +6920,8 @@ Transform:
   m_LocalRotation: {x: 0.11177549, y: 0.0737352, z: -0.27846205, w: 0.9510669}
   m_LocalPosition: {x: 0.10707332, y: -0.029443942, z: -0.010821433}
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9605,6 +9614,7 @@ MeshFilter:
   m_Mesh: {fileID: 4300000, guid: 20e59bf169c3141d88036f7fbbc3e48e, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
@@ -9646,6 +9656,8 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &879415004
 Prefab:
   m_ObjectHideFlags: 0
@@ -13415,6 +13427,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245023540
@@ -13495,6 +13508,8 @@ Transform:
   m_Father: {fileID: 1247696530}
   m_RootOrder: 0
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1258804225
 GameObject:

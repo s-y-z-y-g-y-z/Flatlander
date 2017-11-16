@@ -20,12 +20,16 @@ MonoBehaviour:
     y: 30
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1920
     height: 986
   m_MinSize: {x: 909, y: 442}
   m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
   controlID: 14805
+<<<<<<< HEAD
 =======
     width: 1440
     height: 758
@@ -46,6 +50,8 @@ MonoBehaviour:
 =======
   controlID: 4030
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,10 +76,14 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 0
     y: 693
     width: 1032
     height: 291
+<<<<<<< HEAD
 =======
     x: 286
     y: 332
@@ -86,6 +96,8 @@ MonoBehaviour:
     width: 860
     height: 200
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
@@ -156,12 +168,16 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1034
     height: 986
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 14806
+<<<<<<< HEAD
 =======
     width: 1148
     height: 758
@@ -182,6 +198,8 @@ MonoBehaviour:
 =======
   controlID: 4031
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,6 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -235,6 +254,8 @@ MonoBehaviour:
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
 =======
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -245,6 +266,9 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     width: 1034
     height: 674
 =======
@@ -257,6 +281,7 @@ MonoBehaviour:
   m_Panes:
 <<<<<<< HEAD
   - {fileID: 5}
+<<<<<<< HEAD
 =======
     width: 284
     height: 459
@@ -372,6 +397,8 @@ MonoBehaviour:
 =======
   - {fileID: 6}
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &6
@@ -501,12 +528,16 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 0
     y: 93
     width: 1032
     height: 653
   m_SceneLighting: 1
   lastFramingTime: 3641.490191287171
+<<<<<<< HEAD
 =======
     x: 286
     y: 94
@@ -516,14 +547,16 @@ MonoBehaviour:
 <<<<<<< HEAD
   lastFramingTime: 1343.4497799873352
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 =======
     m_Target: {x: -5.2877746, y: 14.423242, z: 69.33396}
     speed: 2
@@ -554,6 +587,8 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -272.7005, y: -9.80537, z: 74.49538}
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -581,6 +616,9 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_Value: {x: -0, y: 0, z: -0, w: -1}
 =======
     m_Value: {x: 0, y: 0, z: 0, w: -1}
@@ -590,6 +628,7 @@ MonoBehaviour:
     speed: 2
 <<<<<<< HEAD
     m_Value: 31.380377
+<<<<<<< HEAD
 =======
     m_Value: {x: -0.030304413, y: 0.0065943473, z: -0.00020033841, w: -0.99951893}
 =======
@@ -607,6 +646,8 @@ MonoBehaviour:
 =======
     m_Value: 825.0823
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -614,10 +655,10 @@ MonoBehaviour:
   m_ShowGlobalGrid: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
 =======
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
 =======
   m_LastSceneViewRotation: {x: -0.013499466, y: -0.0059995013, z: 0.00008145106, w: -0.99989474}
@@ -669,6 +710,9 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1034
     y: 0
     width: 204
@@ -676,6 +720,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 9}
+<<<<<<< HEAD
 =======
     x: 0
     y: 238
@@ -694,6 +739,8 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_Panes:
   - {fileID: 2}
   m_Selected: 0
@@ -714,10 +761,14 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1238
     y: 0
     width: 268
     height: 986
+<<<<<<< HEAD
 =======
     x: 0
     y: 459
@@ -731,6 +782,8 @@ MonoBehaviour:
     width: 1148
     height: 299
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
 =======
@@ -743,10 +796,10 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 0
-<<<<<<< HEAD
   m_LastSelected: 0
 <<<<<<< HEAD
 --- !u!114 &11
+<<<<<<< HEAD
 =======
   m_LastSelected: 1
 --- !u!114 &13
@@ -754,6 +807,8 @@ MonoBehaviour:
 =======
 --- !u!114 &13
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -777,10 +832,14 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     x: 1240
     y: 93
     width: 264
     height: 965
+<<<<<<< HEAD
 =======
     x: 0
     y: 553
@@ -797,6 +856,8 @@ MonoBehaviour:
 =======
     height: 278
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -812,6 +873,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scripts
 =======
     - Assets/_Assets/_Prefabs/Environment
@@ -819,11 +881,17 @@ MonoBehaviour:
 =======
     - Assets/_Assets/_Prefabs/PlayerController
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+    - Assets/Scripts
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\College\Junior\Fall\GMAP 377\Flatlander\Flatlander
@@ -833,6 +901,7 @@ MonoBehaviour:
     m_SelectedIDs: 64570000
     m_LastClickedID: 22372
     m_ExpandedIDs: 00000000a02d00000c2e00007c560000005700002e5700004257000044570000b2570000e2570000fa570000fe5700004258000086580000ae580000d8580000fa58000016590000185900006a5900006c5900007059000076590000a0600000a260000000ca9a3bffffff7f
+<<<<<<< HEAD
 =======
   - Assets/_Assets/_Prefabs/Environment
 =======
@@ -869,6 +938,8 @@ MonoBehaviour:
     m_LastClickedID: 11562
     m_ExpandedIDs: 000000004c270000d627000038290000d82a0000482b00004c2b0000602b0000ca2b00008c2c00002a2d00003e2e0000b42e0000f62e00002e2f00007c2f0000802f00004e310000583100006c3100003e4f0000404f000000ca9a3bffffff7f
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -899,6 +970,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a02d00000c2e00007c560000005700002e5700004257000044570000b2570000e2570000fa570000fe5700004258000086580000ae580000d8580000fa58000016590000185900006a5900006c5900007059000076590000a0600000a260000000ca9a3bffffff7f
 =======
     m_ExpandedIDs: 000000004c270000d4270000d627000038290000d82a0000482b00004c2b0000602b0000ca2b00008c2c00002a2d00003e2e0000b42e0000f62e00002e2f00007c2f0000802f00004e310000583100006c310000d6410000d841000000ca9a3bffffff7f
@@ -909,6 +981,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000004c270000d627000038290000d82a0000482b00004c2b0000602b0000ca2b00008c2c00002a2d00003e2e0000b42e0000f62e00002e2f00007c2f0000802f00004e310000583100006c3100003e4f0000404f000000ca9a3bffffff7f
 >>>>>>> parent of 1e446c54... Background Image added to scenes
+=======
+    m_ExpandedIDs: 00000000a02d00000c2e00007c560000005700002e5700004257000044570000b2570000e2570000fa570000fe5700004258000086580000ae580000d8580000fa58000016590000185900006a5900006c5900007059000076590000a0600000a260000000ca9a3bffffff7f
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -936,10 +1011,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_SelectedInstanceIDs: cef6fdff
     m_LastClickedInstanceID: -133426
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 324500001e54000034530000
+<<<<<<< HEAD
 =======
     m_SelectedInstanceIDs: 38b5fcff30b5fcff28b5fcff
     m_LastClickedInstanceID: -215752
@@ -957,6 +1036,8 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c8440000a4530000f0480000e0440000
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -981,6 +1062,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_GridSize: 16
@@ -1027,6 +1109,11 @@ MonoBehaviour:
     height: 308
 --- !u!114 &15
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+    m_GridSize: 16
+  m_DirectoriesAreaWidth: 124
+--- !u!114 &12
+>>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}

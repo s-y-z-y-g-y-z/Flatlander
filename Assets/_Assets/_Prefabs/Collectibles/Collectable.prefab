@@ -309,9 +309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a66e01b51da1d74aacd1583d64b7735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  hd: {fileID: 0}
-  pCtrl: {fileID: 0}
+  gm: {fileID: 114704253377574780, guid: 037cfbde270fb7f488793ebcc942a7ff, type: 2}
+  hd: {fileID: 114425535684501144, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}
+  pCtrl: {fileID: 114160651120588822, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}
 --- !u!135 &135914708954960882
 SphereCollider:
   m_ObjectHideFlags: 1

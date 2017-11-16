@@ -1,6 +1,7 @@
 sceneSetups:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/TutTut.unity
 =======
 - path: Assets/Scenes/World4.unity
@@ -8,5 +9,8 @@ sceneSetups:
 =======
 - path: Assets/Scenes/BaseScene.unity
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
+=======
+- path: Assets/Scenes/TutTut.unity
+>>>>>>> parent of ab4ebbeb... reversion to old because broke
   isLoaded: 1
   isActive: 1

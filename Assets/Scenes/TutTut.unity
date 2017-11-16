@@ -41,16 +41,22 @@ RenderSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ab4ebbeb... reversion to old because broke
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 =======
   m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+<<<<<<< HEAD
 =======
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
 =======
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
+=======
+>>>>>>> parent of ab4ebbeb... reversion to old because broke
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -546,21 +552,27 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ab4ebbeb... reversion to old because broke
       value: 449
 =======
       value: 430
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+<<<<<<< HEAD
 =======
       value: 574
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
 =======
       value: 449
 >>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
+=======
+>>>>>>> parent of ab4ebbeb... reversion to old because broke
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 91.5
+      value: 211.5
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}

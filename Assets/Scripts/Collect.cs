@@ -19,6 +19,9 @@ public class Collect : MonoBehaviour {
 
     private void Start()
     {
+        gm = FindObjectOfType<GM>();
+        hd = FindObjectOfType<HealthDepletion>();
+        pCtrl = FindObjectOfType<SideScrollController>();
         
     }
 

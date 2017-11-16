@@ -531,12 +531,12 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 449
+      value: 243.5
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 211.5
+      value: 137
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -950,6 +950,16 @@ Prefab:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 175041274}
+    - target: {fileID: 114129262573577938, guid: 596b4c7dca76a1d4681c8edf9543f753,
+        type: 2}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 175041277}
+    - target: {fileID: 114129262573577938, guid: 596b4c7dca76a1d4681c8edf9543f753,
+        type: 2}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 2800000, guid: 6010ec86c7635d448b1af593879d43dc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596b4c7dca76a1d4681c8edf9543f753, type: 2}
   m_IsPrefabParent: 0
@@ -3996,6 +4006,7 @@ MonoBehaviour:
   inputCtrl: {fileID: 225124898}
   hd: {fileID: 995550005}
   gm: {fileID: 519084214}
+  deathClip: {fileID: 0}
   resetLevel: 0
   harderReset: 0
   hitGround: 0

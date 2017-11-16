@@ -2332,6 +2332,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 69.054}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &266117177
 Prefab:
@@ -2450,6 +2451,8 @@ Prefab:
   m_IsPrefabParent: 0
 =======
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+>>>>>>> parent of 1e446c54... Background Image added to scenes
 --- !u!1 &274602843
 GameObject:
   m_ObjectHideFlags: 0
@@ -6028,12 +6031,16 @@ Transform:
   - {fileID: 805613016}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 10
 <<<<<<< HEAD
 =======
 =======
   m_RootOrder: 9
 >>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 1e446c54... Background Image added to scenes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536711972
 GameObject:
@@ -6873,7 +6880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &666938500 stripped
 Transform:
@@ -9628,7 +9635,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 1e446c54... Background Image added to scenes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
 =======

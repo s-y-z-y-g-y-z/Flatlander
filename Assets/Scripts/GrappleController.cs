@@ -22,7 +22,6 @@ public class GrappleController : MonoBehaviour
     public GameObject dashParticlePrefab;
     public ParameterScreen ps;
     public GM gm;
-    public AudioClip shootClip;
 
     [Header("Modifiers")]
     public float climbSpeed;
@@ -230,9 +229,6 @@ public class GrappleController : MonoBehaviour
         {
             staticHook.SetActive(false);
             recoil.isShooting = true;
-
-            //plays shoot sound ~~JK&HA
-            SoundManager.PlaySFX(shootClip, true);
 
             //pCtrl.playerRb.AddForceAtPosition(-transform.forward * recoilForce, transform.position, ForceMode.VelocityChange);
 

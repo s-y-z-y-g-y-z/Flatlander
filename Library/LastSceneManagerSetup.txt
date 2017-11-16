@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TutTut.unity
+=======
+- path: Assets/Scenes/World4.unity
+>>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
   isLoaded: 1
   isActive: 1

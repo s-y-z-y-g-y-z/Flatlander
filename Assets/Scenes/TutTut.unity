@@ -39,10 +39,14 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 =======
   m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+=======
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+>>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -536,15 +540,19 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 449
 =======
       value: 430
 >>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
+=======
+      value: 574
+>>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 211.5
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}

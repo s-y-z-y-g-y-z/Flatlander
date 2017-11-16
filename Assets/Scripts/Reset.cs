@@ -17,7 +17,6 @@ public class Reset : MonoBehaviour {
 	public fInput inputCtrl;
     public HealthDepletion hd;
     public GM gm;
-    public AudioClip deathClip;
 
     //PUBLIC vals
     public bool resetLevel;
@@ -41,8 +40,7 @@ public class Reset : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Player") {
-            gm.touchHazard = true;
-            SoundManager.PlaySFX(deathClip, true);
+            gm.touchHazard = true;                                               // hitGround = true;
 		}
 	}
 

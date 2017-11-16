@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 /*
  * USED
@@ -15,10 +14,8 @@ using UnityEngine.UI;
 public class fInput : MonoBehaviour {
 
     //EXTERNAL
-    public ParameterScreen ps;
+    public ParameterScreen param;
     public GameObject pauseScreen;
-    public Texture2D reticle;
-    public CursorMode cursorMode;
 
     [HideInInspector]
     public bool paused;
@@ -51,17 +48,15 @@ public class fInput : MonoBehaviour {
     {
         pCtrl = FindObjectOfType<SideScrollController>();
         grappleCtrl=FindObjectOfType<GrappleController>();
-        isPaused = ps.isPaused;
+        isPaused = param.isPaused;
         paused = false;
-        cursorMode = CursorMode.Auto;
-        Cursor.SetCursor(reticle, Vector2.zero, cursorMode);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         
-        isPaused = ps.isPaused;
+        isPaused = param.isPaused;
         HandlePause();
         ToggleSnap();
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -75,8 +70,8 @@ public class fInput : MonoBehaviour {
         {
             if (!pCtrl.isDead)
             {
-                //Cursor.visible = false;
-                //Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
             }
             isShooting = Input.GetButtonDown("Fire1");
             isJumping = Input.GetButtonDown("Jump");
@@ -178,11 +173,11 @@ public class fInput : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ps.handleParamScreen();
+            param.handleParamScreen();
         }
         if (Input.GetButtonDown("Cancel"))
         {
-            ps.handlePauseScreen();
+            param.handlePauseScreen();
         }
     }
 

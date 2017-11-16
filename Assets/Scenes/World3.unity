@@ -1467,6 +1467,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 114425535684501144, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1087820291}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}
   m_IsPrefabParent: 0
@@ -7059,6 +7064,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071376088}
   m_Mesh: {fileID: 4300000, guid: ea618588467fd4ef1ad936af8dd0a984, type: 3}
+--- !u!114 &1087820291 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114933053181660116, guid: 85f17cd307653fd4cbfb15160c7805b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1178501561}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1103667038
 GameObject:
   m_ObjectHideFlags: 0

@@ -1315,7 +1315,7 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -1991,206 +1991,6 @@ Transform:
   m_Father: {fileID: 535874404}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 69.054}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 9db28875... reversion again because why the fuck not
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
---- !u!1001 &266117177
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -251
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -64.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 61.431213
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -251
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -64.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.48803216
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.66414315
-      objectReference: {fileID: 0}
-    - target: {fileID: 224300115617253898, guid: 2781b6cce61ab4e8885059ea4bb6c92b,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.5745105
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2781b6cce61ab4e8885059ea4bb6c92b, type: 2}
-  m_IsPrefabParent: 0
-=======
->>>>>>> parent of 1e446c54... Background Image added to scenes
---- !u!1 &274602843
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1232065750054908, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 274602844}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_RightHandPinky4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &274602844
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4489715477619412, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 274602843}
-  m_LocalRotation: {x: 6.938894e-18, y: -7.2824226e-34, z: -1.0495077e-16, w: 1}
-  m_LocalPosition: {x: 0.01412857, y: -0.008626403, z: 0.0019307637}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 151384465}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &278261612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1326139355590706, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 278261613}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_LeftElbowEffector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &278261613
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4370162339370932, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 278261612}
-  m_LocalRotation: {x: -1.08023106e-19, y: 3.8037717e-35, z: 1.8211607e-17, w: 1}
-  m_LocalPosition: {x: -0.43242255, y: 1.4185661, z: -0.027086444}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1804602495}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-<<<<<<< HEAD
-=======
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &286647398
 Prefab:
   m_ObjectHideFlags: 0
@@ -4309,8 +4109,8 @@ Transform:
   - {fileID: 198553478}
   - {fileID: 690080191}
   - {fileID: 621325948}
-  - {fileID: 1119323879}
   - {fileID: 632750150}
+  - {fileID: 1119323879}
   - {fileID: 457175441}
   - {fileID: 1429010148}
   - {fileID: 1906950762}
@@ -4323,7 +4123,7 @@ Transform:
   - {fileID: 1781222568}
   - {fileID: 258114929}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492389173
 GameObject:
@@ -4710,56 +4510,7 @@ Transform:
   - {fileID: 781644971}
   - {fileID: 805613016}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 10
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  m_RootOrder: 9
->>>>>>> parent of 1e446c54... Background Image added to scenes
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &536711972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1500267903957546, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 536711973}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_RightHandMiddle3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &536711973
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4057449440978968, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 536711972}
-  m_LocalRotation: {x: -1.3877788e-17, y: 1.3877788e-17, z: -2.766884e-16, w: 1}
-  m_LocalPosition: {x: 0.025891876, y: -0.017020721, z: 0.0057341373}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 961707248}
-  m_Father: {fileID: 2067106902}
-  m_RootOrder: 0
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-<<<<<<< HEAD
-=======
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543688744
 GameObject:
@@ -5390,50 +5141,6 @@ Transform:
   m_GameObject: {fileID: 653741028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &666938500 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4964417578794688, guid: 63bc5a2cdc584b7459c7e5153c0a5bd5,
-    type: 2}
-  m_PrefabInternal: {fileID: 972386876}
---- !u!1 &675960722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1330454873000498, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 675960723}
-  m_Layer: 0
-  m_Name: Character1_RightArm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &675960723
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4682395118390030, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 675960722}
-  m_LocalRotation: {x: 0.11177549, y: 0.0737352, z: -0.27846205, w: 0.9510669}
-  m_LocalPosition: {x: 0.10707332, y: -0.029443942, z: -0.010821433}
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7477,55 +7184,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876035567}
   m_Mesh: {fileID: 4300000, guid: 20e59bf169c3141d88036f7fbbc3e48e, type: 3}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
---- !u!1 &877756129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 877756130}
-  m_Layer: 0
-  m_Name: colle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &877756130
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 877756129}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.66, y: 17.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-<<<<<<< HEAD
-=======
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!1001 &879415004
 Prefab:
   m_ObjectHideFlags: 0
@@ -7725,7 +7383,7 @@ Transform:
   m_LocalScale: {x: 100.00006, y: 100, z: 100.00006}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -2.125, y: 0, z: 0}
 --- !u!1 &898554408
 GameObject:
@@ -10192,7 +9850,7 @@ Transform:
   m_LocalScale: {x: 1.3364607, y: 1.8581617, z: 3.09342}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253917594
 GameObject:
@@ -10225,215 +9883,6 @@ Transform:
   m_Father: {fileID: 535874404}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1 &1256204994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1121975068942520, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1256204995}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_LeftHipEffector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1256204995
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4481004861596972, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1256204994}
-  m_LocalRotation: {x: -1.4406336e-16, y: 9.822872e-17, z: -1.0061396e-16, w: 1}
-  m_LocalPosition: {x: -0.111186095, y: 0.9372999, z: 0.047939494}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1804602495}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1256320245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1541528971600530, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1256320246}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_RightHandIndex3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1256320246
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4962366975887460, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1256320245}
-  m_LocalRotation: {x: 2.0816682e-17, y: -2.7755576e-17, z: 3.469447e-18, w: 1}
-  m_LocalPosition: {x: 0.022554092, y: -0.012845917, z: 0.0055346605}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 972434525}
-  m_Father: {fileID: 492930777}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1258061161
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1394496295026336, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1258061162}
-  m_Layer: 0
-  m_Name: Character1_Hips
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1258061162
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4005902892005952, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1232715965}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3, y: -20.956, z: -1.4629}
-  m_LocalScale: {x: 1.3364607, y: 1.8581617, z: 3.09342}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1245023540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1576909821914062, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1245023541}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_RightHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1245023541
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4456387569366908, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1245023540}
-  m_LocalRotation: {x: -1.2325952e-32, y: 6.123234e-17, z: 0, w: 1}
-  m_LocalPosition: {x: 0.273192, y: 0, z: 0.023446621}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1118424562}
-  - {fileID: 325685211}
-  - {fileID: 1496723538}
-  - {fileID: 2051122488}
-  - {fileID: 583659135}
-  m_Father: {fileID: 259413700}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1247696529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1082215223330524, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1247696530}
-  m_Layer: 0
-  m_Name: Character1_Reference
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1247696530
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4811701291008528, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1247696529}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1258061162}
-  m_Father: {fileID: 164979402}
-  m_RootOrder: 2
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-=======
-  m_GameObject: {fileID: 1258061161}
-  m_LocalRotation: {x: -0.012084471, y: 0.40953442, z: 0.02902899, w: 0.91175264}
-  m_LocalPosition: {x: -0.04209283, y: 0.86810684, z: -0.036606625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2140659603}
-  - {fileID: 219842594}
-  - {fileID: 1723249907}
-  m_Father: {fileID: 1247696530}
-  m_RootOrder: 0
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1258804225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1658884402053134, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1258804226}
-  m_Layer: 0
-  m_Name: Character1_Ctrl_LeftHandMiddle4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1258804226
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4284884058170294, guid: 1fb16853441064f4b90190a9c375bf9b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258804225}
-  m_LocalRotation: {x: 8.326673e-17, y: 8.326673e-17, z: 2.177078e-16, w: 1}
-  m_LocalPosition: {x: -0.016481781, y: -0.010834656, z: 0.0036352372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1027645829}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
 --- !u!1 &1260477403
 GameObject:
   m_ObjectHideFlags: 0
@@ -13850,7 +13299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1712568451
 GameObject:
@@ -16742,7 +16191,7 @@ Transform:
   m_LocalScale: {x: 7.9002395, y: 7.900236, z: 5.8781424}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!1 &2015726420
 GameObject:
@@ -17218,7 +16667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4934442125358794, guid: b06d11b5581c5554ca80817a366be1a5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114522046768576958, guid: b06d11b5581c5554ca80817a366be1a5,
         type: 2}
@@ -17311,7 +16760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4708165966055316, guid: 037cfbde270fb7f488793ebcc942a7ff, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114704253377574780, guid: 037cfbde270fb7f488793ebcc942a7ff,
         type: 2}

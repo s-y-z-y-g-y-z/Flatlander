@@ -38,29 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-<<<<<<< HEAD
-=======
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -548,34 +526,12 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
       value: 449
-=======
-      value: 430
->>>>>>> 1e446c5474f52e2ae38fe23220486fe1d8d1a356
-<<<<<<< HEAD
-=======
-      value: 574
->>>>>>> parent of 54b298bc... Particle Effects Manager and Sound manager
-=======
-      value: 449
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
-=======
->>>>>>> parent of ab4ebbeb... reversion to old because broke
-=======
-      value: 449
->>>>>>> parent of 4e4e780a... Merge branch 'test' of https://github.com/s-y-z-y-g-y-z/Flatlander into test
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -610,7 +566,7 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -1388,7 +1344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289723098
 GameObject:
@@ -3597,7 +3553,7 @@ Transform:
   m_Children:
   - {fileID: 1736053504}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850845327
 GameObject:
@@ -4109,7 +4065,7 @@ Transform:
   m_LocalScale: {x: 100.00006, y: 100, z: 100.00006}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -2.125, y: 0, z: 0}
 --- !u!1 &961500074
 GameObject:
@@ -4264,7 +4220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4556959934852804, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114425535684501144, guid: 1fb16853441064f4b90190a9c375bf9b,
         type: 2}
@@ -5060,7 +5016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1299707112
 GameObject:
@@ -6259,7 +6215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684598280
 GameObject:
@@ -6539,7 +6495,7 @@ Transform:
   - {fileID: 1945326827}
   - {fileID: 1750417786}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763062292
 GameObject:
@@ -7915,7 +7871,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136059531
 GameObject:

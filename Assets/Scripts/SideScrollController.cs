@@ -29,6 +29,7 @@ public class SideScrollController : MonoBehaviour
     public GameObject gunObj;
     public Transform rightShoulder;
     public GM gm;
+    public AudioClip deathClip;
 
     //Multipliers for movement values
     [Header("Movement Modifiers")]
@@ -98,6 +99,8 @@ public class SideScrollController : MonoBehaviour
     public float leanAmt;
     public float horizontal;
     public float vertical;
+    private int ragdollAddVelTimer;
+    private Vector3 onDeathVel;
     private float topForceDir;
     private bool isJumping;
     private Vector3 xzForceDirection;
@@ -107,6 +110,7 @@ public class SideScrollController : MonoBehaviour
     //initializes objects and sets up animator
     void Start ()
     {
+        gm = FindObjectOfType<GM>();
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         jointRbs = characterGameObj.GetComponentsInChildren<Rigidbody>();
@@ -114,27 +118,25 @@ public class SideScrollController : MonoBehaviour
         inputCtrl = FindObjectOfType<fInput>();
         initPlayerPos = transform.position;
         isDead = false;
-        HandleRagdoll();
+        DisableRagdoll();
     }
     
     //for non-phsyics physics and calculations
     private void Update()
     {
-        HandleRagdoll();
         HandleAnimValues();
         HandleJump();
         lookPos = inputCtrl.lookPos;
         if(inputCtrl.reset)
         {
-            gm.resetScene();
+            gm.ResetScene();
         }
         horizontal = inputCtrl.horizontal;
         vertical = inputCtrl.vertical;
         isJumping = inputCtrl.isJumping;
         isSideScrolling = inputCtrl.isSideScrolling;
         groundCheckHeights = new Vector2(groundHitFront.point.y, groundHitBack.point.y); //checks slopes of surface relative to player forward
-        yVelocity = playerRb.velocity.y;
-        
+
     }
 
     public void resetPosition()
@@ -153,7 +155,13 @@ public class SideScrollController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleFriction();
+        //HandleRagdoll();
         //HandleShoulder();
+
+        yVelocity = playerRb.velocity.y;
+
+        if (!isDead)
+            onDeathVel = playerRb.velocity;
     }
 
 //HANDLERS
@@ -370,50 +378,50 @@ public class SideScrollController : MonoBehaviour
     }
 
     //HEY BEN IF YOU COULD DOCUMENT THIS THATD BE GREAT THANKS
-    void HandleRagdoll()
+    public void DisableRagdoll()
     {
-        if(Input.GetKeyDown(KeyCode.K))
+        anim.enabled = true;
+        foreach (Rigidbody rb in jointRbs)
         {
-            isDead = !isDead;
+            rb.interpolation = RigidbodyInterpolation.None;
+            rb.isKinematic = true;
         }
-
-
-        if (isDead)
+        foreach (Collider col in jointCols)
         {
-            characterGameObj.transform.parent = null;
-            playerCollider.enabled = false;
-            playerRb.isKinematic = true;
-            anim.enabled = false;
-            foreach (Rigidbody rb in jointRbs)
+            col.enabled = false;
+        }
+        characterGameObj.transform.parent = transform;
+        characterGameObj.transform.localPosition = Vector3.zero;
+        characterGameObj.transform.localRotation = Quaternion.identity;
+        playerCollider.enabled = true;
+        playerRb.isKinematic = false;
+        ragdollAddVelTimer = 0;
+    }
+
+
+    public void EnableRagdoll()
+    {
+        characterGameObj.transform.parent = null;
+        playerCollider.enabled = false;
+        playerRb.isKinematic = true;
+        anim.enabled = false;
+        foreach (Rigidbody rb in jointRbs)
+        {
+            ragdollAddVelTimer++;
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
+            rb.isKinematic = false;
+
+            if(ragdollAddVelTimer<=jointRbs.Length)
             {
-                rb.interpolation = RigidbodyInterpolation.None;
-                rb.isKinematic = false;
-            }
-            foreach (Collider col in jointCols)
-            {
-                col.enabled = true;
+                rb.velocity = onDeathVel;
             }
         }
-        else
+        foreach (Collider col in jointCols)
         {
-            foreach (Rigidbody rb in jointRbs)
-            {
-                rb.interpolation = RigidbodyInterpolation.None;
-                rb.isKinematic = true;
-            }
-            foreach (Collider col in jointCols)
-            {
-                col.enabled = false;
-            }
-            characterGameObj.transform.parent = transform;
-            characterGameObj.transform.localPosition = Vector3.zero;
-            characterGameObj.transform.localRotation = Quaternion.identity;
-            playerCollider.enabled = true;
-            playerRb.isKinematic = false;
-            anim.enabled = true;
-
+            col.enabled = true;
         }
     }
+
     //COLLISION CHECKS
     //checks collision entering
     private void OnCollisionEnter(Collision collision)
@@ -421,7 +429,16 @@ public class SideScrollController : MonoBehaviour
         //checks the impact force
         impactForce = collision.impulse.magnitude;
 
-        inContact = true;
+        if (collision.gameObject.tag == "Hazard")
+        {
+            isDead = true;
+            gm.touchHazard = true;
+            SoundManager.PlaySFX(deathClip, true);
+
+            //enable ragdoll physics
+            EnableRagdoll();
+
+        }
     }
 
     //checks if exiting collider

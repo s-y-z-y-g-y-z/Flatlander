@@ -15,7 +15,6 @@ public class WinScreen : MonoBehaviour
 {
 
     //PUBLIC SCRIPT REFERENCES
-    public Reset res;
     public GM gm;
 
     //public buttons
@@ -39,7 +38,7 @@ public class WinScreen : MonoBehaviour
 
     public void buttonReset()
     {
-        gm.resetScene();
+        gm.ResetScene();
     }
 
     public void buttonMenu()

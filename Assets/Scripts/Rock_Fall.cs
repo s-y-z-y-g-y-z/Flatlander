@@ -35,7 +35,6 @@ public class Rock_Fall : MonoBehaviour {
 	{
         Vector3 velocity = col.relativeVelocity;
         if (col.gameObject.CompareTag("Hook")) {
-            Debug.Log("Velocity vector is: " + velocity);
 			StartCoroutine (Fall());
 		}
 	} 

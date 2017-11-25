@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PauseScreen : MonoBehaviour {
 
     //PUBLIC SCRIPT REFERENCES
-    public Reset res;
     public GM gm;
 
     //public buttons
@@ -27,7 +26,7 @@ public class PauseScreen : MonoBehaviour {
 
     public void buttonReset()
     {
-        gm.resetScene();
+        gm.ResetScene();
         gameObject.SetActive(false);
     }
 

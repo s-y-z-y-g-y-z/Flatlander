@@ -37,10 +37,9 @@ GameObject:
   - component: {fileID: 33871130216027844}
   - component: {fileID: 65780500658492442}
   - component: {fileID: 23336650362530482}
-  - component: {fileID: 114280385609324164}
   m_Layer: 0
   m_Name: Lava (7)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,10 +55,9 @@ GameObject:
   - component: {fileID: 33310206946068522}
   - component: {fileID: 65028417441895002}
   - component: {fileID: 23694338460081002}
-  - component: {fileID: 114923712700117210}
   m_Layer: 0
   m_Name: Lava (2)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,10 +73,9 @@ GameObject:
   - component: {fileID: 33257788774045482}
   - component: {fileID: 65792325613053102}
   - component: {fileID: 23784268216365140}
-  - component: {fileID: 114181281375558142}
   m_Layer: 0
   m_Name: Lava (5)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,10 +127,9 @@ GameObject:
   - component: {fileID: 33634790594435286}
   - component: {fileID: 65073763287815664}
   - component: {fileID: 23761258840878538}
-  - component: {fileID: 114775581756117956}
   m_Layer: 0
   m_Name: Lava (1)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,10 +200,9 @@ GameObject:
   - component: {fileID: 33466248248096390}
   - component: {fileID: 65329545133942390}
   - component: {fileID: 23300548636027998}
-  - component: {fileID: 114814433163347206}
   m_Layer: 0
   m_Name: Lava (4)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,10 +307,9 @@ GameObject:
   - component: {fileID: 33905976655318920}
   - component: {fileID: 65177246531946560}
   - component: {fileID: 23782888553039454}
-  - component: {fileID: 114341311053737446}
   m_Layer: 0
   m_Name: Lava (6)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,10 +475,9 @@ GameObject:
   - component: {fileID: 33663614470628134}
   - component: {fileID: 65007386915672838}
   - component: {fileID: 23260855756762236}
-  - component: {fileID: 114332261907409852}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,10 +493,9 @@ GameObject:
   - component: {fileID: 33615851893183148}
   - component: {fileID: 65472619552042546}
   - component: {fileID: 23636232688088112}
-  - component: {fileID: 114741697054252736}
   m_Layer: 0
   m_Name: Lava (3)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2168,78 +2160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: {fileID: 1309377994891576}
   seconds: 2
---- !u!114 &114181281375558142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1125757537383602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
---- !u!114 &114280385609324164
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060623714544794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
---- !u!114 &114332261907409852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1871698828477126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
---- !u!114 &114341311053737446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637327007250818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
 --- !u!114 &114465813136072450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2254,6 +2174,7 @@ MonoBehaviour:
   obj: {fileID: 4539503794529048, guid: 752266b26cf8ac84da28d239c4ba4456, type: 2}
   spawnRate: 7
   max: 7
+  force: 0
 --- !u!114 &114476963879201272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2267,24 +2188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: {fileID: 1212376674415660}
   seconds: 2
---- !u!114 &114741697054252736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885174339442320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
 --- !u!114 &114767221549794388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2299,24 +2202,6 @@ MonoBehaviour:
   ps: {fileID: 0}
   gm: {fileID: 0}
   win: 0
---- !u!114 &114775581756117956
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144064957042908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
 --- !u!114 &114812667947656508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2330,42 +2215,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: {fileID: 1717055986184180}
   seconds: 2
---- !u!114 &114814433163347206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1243868003948158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
---- !u!114 &114923712700117210
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082932302695616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a347059174540019543bbb5d6f4d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pCtrl: {fileID: 0}
-  inputCtrl: {fileID: 0}
-  hd: {fileID: 0}
-  gm: {fileID: 0}
-  resetLevel: 0
-  harderReset: 0
-  hitGround: 0
 --- !u!114 &114969297750262348
 MonoBehaviour:
   m_ObjectHideFlags: 1

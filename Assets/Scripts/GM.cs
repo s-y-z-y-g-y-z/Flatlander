@@ -26,7 +26,7 @@ public class GM : MonoBehaviour
     public float totalScore;
     public int healthVal;
     public bool touchHazard;
-    public bool isDead;
+    public bool gameOver;
     public Text clock;
     public GameObject ks;
     public GameObject ws;
@@ -40,7 +40,7 @@ public class GM : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        isDead = false;
+        gameOver = false;
         touchHazard = false;
         inputCtrl = FindObjectOfType<fInput>();
         pCtrl = FindObjectOfType<SideScrollController>();
@@ -74,26 +74,29 @@ public class GM : MonoBehaviour
     //checks if the player is dead
     public void checkDead()
     {
-        if(healthVal <= 0 || inputCtrl.reset || touchHazard) 
+        if(healthVal <= 0 || inputCtrl.reset || pCtrl.isDead)
         {
-            isDead = true;
+            pCtrl.isDead = true;
+            pCtrl.EnableRagdoll();
+            gameOver = true;
         }
         else
         {
-            isDead = false;
+            pCtrl.DisableRagdoll();
+            gameOver = false;
         }
     }
 
     public void handlePauses()
     {
-        if (isDead)
+        if (gameOver)
         {
             ks.SetActive(true);
             pCtrl.isDead = true;
             gCtrl.Retract();
             if (Input.GetButtonDown("Jump"))
             {
-                resetScene();
+                ResetScene();
             }
         }
         else if (winArea.win)
@@ -102,16 +105,18 @@ public class GM : MonoBehaviour
             gCtrl.Retract();
             if (Input.GetButtonDown("Jump"))
             {
-                resetScene();
+                ResetScene();
             }
         }
-        else if (ps.isPaused && !isDead && !pCtrl.isDead)
+        else if (ps.isPaused && !gameOver && !pCtrl.isDead)
         {
             pauseScreen.SetActive(true);
+            pCtrl.DisableRagdoll();
             gCtrl.Retract();
+
             if (Input.GetButtonDown("Jump"))
             {
-                resetScene();
+                ResetScene();
             }
         }
         else
@@ -125,9 +130,11 @@ public class GM : MonoBehaviour
     }
     
     //function to reset the scene
-    public void resetScene()
+    public void ResetScene()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        pCtrl.isDead = false;
+        pCtrl.DisableRagdoll();
+        gameOver = false;
         pCtrl.transform.position = pCtrl.initPlayerPos;
         pCtrl.playerRb.velocity = Vector3.zero;
         hd.healthVal = 100;
@@ -139,11 +146,6 @@ public class GM : MonoBehaviour
         {
             ps.isPaused = false;
         }
-        /*if (res.hitGround)   NO LONGER IN USE 
-        {
-            
-            res.hitGround = false;
-        }*/
 
         winArea.win = false;
 
@@ -161,7 +163,7 @@ public class GM : MonoBehaviour
 
     public float calculateScore()
     {
-        if (isDead)
+        if (gameOver)
         {
             roundedTimer = 0;
         }
@@ -173,6 +175,6 @@ public class GM : MonoBehaviour
 
     public void kill()
     {
-        isDead = true;
+        gameOver = true;
     }
 }

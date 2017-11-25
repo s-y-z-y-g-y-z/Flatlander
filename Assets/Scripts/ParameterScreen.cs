@@ -89,7 +89,7 @@ public class ParameterScreen : MonoBehaviour {
 
         if (isPaused && Input.GetButtonDown("Jump"))
         {
-            gm.resetScene();
+            gm.ResetScene();
             pauseScreen.gameObject.SetActive(false);
         }
     }
@@ -98,7 +98,7 @@ public class ParameterScreen : MonoBehaviour {
     public void checkPause()
     {
         //pauses the game
-        if (isPaused && !player.isDead && !gm.isDead)
+        if (isPaused && !player.isDead && !gm.gameOver)
         {
             Time.timeScale = 0.0f;
         }
@@ -130,7 +130,7 @@ public class ParameterScreen : MonoBehaviour {
     {
         isPaused = !isPaused;
 
-        if (isPaused && !gm.isDead && !player.isDead)
+        if (isPaused && !gm.gameOver && !player.isDead)
         {
             pauseScreen.SetActive(true);
         }

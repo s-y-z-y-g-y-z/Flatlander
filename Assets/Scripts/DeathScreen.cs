@@ -14,7 +14,6 @@ using UnityEngine.SceneManagement;
 public class DeathScreen : MonoBehaviour {
 
     //PUBLIC SCRIPT REFERENCES
-    public Reset res;
     public GM gm;
 
     //public buttons
@@ -36,8 +35,7 @@ public class DeathScreen : MonoBehaviour {
 
     public void buttonReset()
     {
-        gm.resetScene();
-        gm.isDead = false;
+        gm.ResetScene();
     }
 
     public void buttonMenu()

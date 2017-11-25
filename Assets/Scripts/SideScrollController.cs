@@ -22,13 +22,13 @@ using UnityEngine.SceneManagement;
 
 public class SideScrollController : MonoBehaviour
 {
-    //PUBLICS
+    //PUBLICS AND DEPENDENCIES
     public Animator anim;
     public PhysicMaterial playerPhys;
     public GameObject characterGameObj;
     public GameObject gunObj;
     public Transform rightShoulder;
-    public GM gm;
+    GM gm;
     public AudioClip deathClip;
 
     //Multipliers for movement values

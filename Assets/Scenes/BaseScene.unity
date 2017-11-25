@@ -227,6 +227,11 @@ Prefab:
       propertyPath: deathClip
       value: 
       objectReference: {fileID: 8300000, guid: 175e94a1f67300c4e8a8a0e993221a85, type: 3}
+    - target: {fileID: 114160651120588822, guid: 1fb16853441064f4b90190a9c375bf9b,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2134193115}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fb16853441064f4b90190a9c375bf9b, type: 2}
   m_IsPrefabParent: 0
@@ -240,12 +245,12 @@ Prefab:
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 252.5
+      value: 346.5
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 142
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 224599774230721592, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
@@ -327,12 +332,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223098890718226348, guid: 85f17cd307653fd4cbfb15160c7805b3,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2116469592}
-    - target: {fileID: 114512217835047850, guid: 85f17cd307653fd4cbfb15160c7805b3,
+    - target: {fileID: 114059731460635880, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: gm
       value: 
@@ -342,11 +342,16 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2134193115}
-    - target: {fileID: 114059731460635880, guid: 85f17cd307653fd4cbfb15160c7805b3,
+    - target: {fileID: 114512217835047850, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: gm
       value: 
       objectReference: {fileID: 2134193115}
+    - target: {fileID: 223098890718226348, guid: 85f17cd307653fd4cbfb15160c7805b3,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2116469592}
     - target: {fileID: 114489230117095578, guid: 85f17cd307653fd4cbfb15160c7805b3,
         type: 2}
       propertyPath: player

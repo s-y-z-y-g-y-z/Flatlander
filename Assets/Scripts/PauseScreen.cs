@@ -12,22 +12,35 @@ public class PauseScreen : MonoBehaviour {
     //public buttons
     public Button reset;
     public Button menu;
+    public GameObject targetPos;
+    public Vector3 initPos;
 
     // Use this for initialization
     void Start () {
         reset.onClick.AddListener(buttonReset);
         menu.onClick.AddListener(buttonMenu);
+        initPos = transform.position;
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+            gameObject.transform.position = initPos;
+
+        if (gameObject.activeSelf)
+        {
+            gm.LerpUI(gameObject, targetPos.transform.position, 5f, true);
+        }
+       
+        
+    }
 
     public void buttonReset()
     {
         gm.ResetScene();
         gameObject.SetActive(false);
+
     }
 
     public void buttonMenu()

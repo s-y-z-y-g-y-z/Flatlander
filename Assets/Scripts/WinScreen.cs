@@ -21,6 +21,8 @@ public class WinScreen : MonoBehaviour
     public Button resetButton;
     public Button menuButton;
     public Text scoreText;
+    public GameObject targetPos;
+    private Vector3 initPos;
 
     // Use this for initialization
     void Start()
@@ -28,17 +30,23 @@ public class WinScreen : MonoBehaviour
         resetButton.onClick.AddListener(buttonReset);
         menuButton.onClick.AddListener(buttonMenu);
         scoreText.text = "Score: ";
+        initPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = "Score: " + gm.calculateScore();
+        if (gameObject.activeSelf)
+        {
+            gm.LerpUI(gameObject, targetPos.transform.position, 5f, true);
+        }
     }
 
     public void buttonReset()
     {
         gm.ResetScene();
+        gameObject.transform.position = initPos;
     }
 
     public void buttonMenu()

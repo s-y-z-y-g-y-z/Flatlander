@@ -129,6 +129,18 @@ public class GM : MonoBehaviour
         }
     }
     
+    public void LerpUI(GameObject uiObject,Vector2 target, float speed, bool lerp)
+    {
+        if(lerp)
+        {
+            uiObject.transform.position = Vector2.Lerp(uiObject.transform.position, target, Time.unscaledDeltaTime * speed);
+        }
+        else
+        {
+            uiObject.transform.position = Vector2.MoveTowards(uiObject.transform.position, target, Time.unscaledDeltaTime * speed);
+        }
+    }
+    
     //function to reset the scene
     public void ResetScene()
     {

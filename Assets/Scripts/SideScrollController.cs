@@ -28,8 +28,13 @@ public class SideScrollController : MonoBehaviour
     public GameObject characterGameObj;
     public GameObject gunObj;
     public Transform rightShoulder;
-    GM gm;
+
     public AudioClip deathClip;
+    public AudioClip impactClip;
+
+    //CLASS REFRENCES
+    GM gm;
+    HealthDepletion pHealth;
 
     //Multipliers for movement values
     [Header("Movement Modifiers")]
@@ -59,6 +64,9 @@ public class SideScrollController : MonoBehaviour
     public LayerMask groundMask;        //Layers the ground rays can hit
 
     float impactForce;
+    public float maxImpact = 40f;        //max survivable impact force
+
+
     bool flipped;
 
     //Procedural animation values
@@ -111,6 +119,7 @@ public class SideScrollController : MonoBehaviour
     void Start ()
     {
         gm = FindObjectOfType<GM>();
+        pHealth = FindObjectOfType<HealthDepletion>();
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         jointRbs = characterGameObj.GetComponentsInChildren<Rigidbody>();
@@ -347,10 +356,6 @@ public class SideScrollController : MonoBehaviour
 
         leanVal = Mathf.Lerp(leanVal, targetLean*maxLean, Time.deltaTime * leanSpeed);
 
-        //get rotation from aimpoint
-        Vector3 lookDir;
-
-        lookDir = (lookPos - transform.position);
 
         float look;
         if (!isSwinging)
@@ -428,16 +433,38 @@ public class SideScrollController : MonoBehaviour
     {
         //checks the impact force
         impactForce = collision.impulse.magnitude;
+        //print(impactForce);
 
         if (collision.gameObject.tag == "Hazard")
         {
             isDead = true;
             gm.touchHazard = true;
-            SoundManager.PlaySFX(deathClip, true);
+            SoundManager.PlaySFX(deathClip, true, 1f);
 
             //enable ragdoll physics
             EnableRagdoll();
 
+        }
+
+        if(impactForce>maxImpact*.6f)//handle impact dmg/sfx
+        {
+            SoundManager.PlaySFX(impactClip, true, Mathf.Clamp01(impactForce/maxImpact));
+
+            pHealth.handleHealth(-(int)impactForce/3, false);//small dmg
+
+        }
+        else if (impactForce > maxImpact * .85f)
+        {
+            SoundManager.PlaySFX(deathClip, true, 1f);
+            pHealth.handleHealth(-2, true);
+        }
+
+
+        if (impactForce > maxImpact)
+        {
+            SoundManager.PlaySFX(deathClip, true, 1f);
+            isDead = true;
+            EnableRagdoll();
         }
     }
 

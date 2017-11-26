@@ -2824,7 +2824,8 @@ MonoBehaviour:
   characterGameObj: {fileID: 1492489622038756}
   gunObj: {fileID: 1661235737361336}
   rightShoulder: {fileID: 4595324971920826}
-  gm: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 175e94a1f67300c4e8a8a0e993221a85, type: 3}
+  impactClip: {fileID: 8300000, guid: 8f43d28a1b7183d49bffdee40e0d35ed, type: 3}
   fallMultiplier: 1.5
   jumpFallMultiplier: 1
   groundAccelerationPower: 35
@@ -2848,6 +2849,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967039
+  maxImpact: 40
   turnSpeed: 8
   leanSpeed: 10
   maxLean: 20
@@ -2896,6 +2898,7 @@ MonoBehaviour:
     type: 2}
   ps: {fileID: 0}
   gm: {fileID: 0}
+  shootClip: {fileID: 8300000, guid: 5f21ec916ccfc64409c76e617aade808, type: 3}
   climbSpeed: 1
   swingPower: 10
   fastClimbDamper: 0

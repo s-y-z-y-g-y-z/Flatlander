@@ -18,7 +18,7 @@ public class GM : MonoBehaviour
     public HealthDepletion hd;
     public GrappleController gCtrl;
     public WinArea winArea;
-
+   
     //PUBLIC ATTRIBUTES
     public bool resetLevel;
     public float colScore;
@@ -36,7 +36,6 @@ public class GM : MonoBehaviour
     private float timer;
     private float roundedTimer;
     private float startTime;
-
 	// Use this for initialization
 	void Start ()
     {
@@ -50,7 +49,7 @@ public class GM : MonoBehaviour
         pauseScreen.SetActive(false);
         startTime = 6000;
         timer = startTime;
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -76,12 +75,14 @@ public class GM : MonoBehaviour
     {
         if(healthVal <= 0 || inputCtrl.reset || pCtrl.isDead)
         {
+            Time.timeScale = Mathf.Lerp(Time.timeScale, .3f, Time.unscaledDeltaTime * 1f);
             pCtrl.isDead = true;
             pCtrl.EnableRagdoll();
             gameOver = true;
         }
         else
         {
+            Time.timeScale = 1f;
             pCtrl.DisableRagdoll();
             gameOver = false;
         }

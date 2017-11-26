@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.PostProcessing;
 /*
  * USED
  * BEN SPURR
@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
     private float zTarget;                  //target z position for dynamic dolly
     private Vector2 curZMinMax;             //vector of zMax and zMins
     private SideScrollController pCtrl;     //gets reference to player controller
-
+    private PostProcessingProfile postProfile;
     float targetOtho;
     //initializes values
     void Start()
@@ -45,14 +45,32 @@ public class CameraController : MonoBehaviour
             transform.position = target.position + positionOffset * (zTarget * distance);
         }
         initOrthosize = Camera.main.orthographicSize;
+        postProfile = Camera.main.GetComponent<PostProcessingBehaviour>().profile;
+    }
+
+    void HandlePostDOF()
+    {
+        if (postProfile != null)
+        {
+            float dist = Vector3.Distance(transform.position, target.transform.position);
+            // Get reference to the DoF settings
+            var dof = postProfile.depthOfField.settings;
+
+            // Set variables
+            dof.focusDistance = dist;
+            //dof.aperture = aperture;
+
+            // Apply settings
+            postProfile.depthOfField.settings = dof;
+        }
     }
 
     // Late Uptate called after all for no render artifacts/stuttering
     void LateUpdate()
     {
-
+        HandlePostDOF();
         //dist multiplier based on player speed
-        zTarget = zTarget = Mathf.Lerp(zTarget, (Mathf.Clamp((pCtrl.currentVelocity / pCtrl.maxSpeed) * zMax, zMin, zMax)), Time.deltaTime * zoomDamp);
+        zTarget = Mathf.Lerp(zTarget, (Mathf.Clamp((pCtrl.currentVelocity / pCtrl.maxSpeed) * zMax, zMin, zMax)), Time.deltaTime * zoomDamp);
 
         //move and look
         transform.position = Vector3.Lerp(transform.position, target.position + positionOffset, Time.deltaTime * movementDamp);

@@ -51,35 +51,6 @@ public class HealthDepletion : MonoBehaviour {
 
 	}
 
-/* THESE FUNCTIONS HAVE BEEN REPLACED BY handleHealth()
-	public void RemoveHealth(int dmg, bool removeChunk)
-    { 
-        //  removeChunk = dmg removes a chunk or percentage of max health from current health
-        //  !removeChunk = dmg removes individual health units
-        if (removeChunk && healthVal > 0)
-        {
-            healthVal -= maxHealth / healthChunks;
-        }
-        else
-        {
-            //bleed
-            healthVal -= dmg;
-        }
-	}
-
-    public void AddHealth(int heal, bool healChunk)
-    {
-        if (healChunk && healthVal < 100)
-        {
-            healthVal += maxHealth / healthChunks;
-        }
-        else
-        {
-            healthVal += heal;
-        }
-    }
-*/
-
     //JK~~
     //handles all health, removing or adding
     //healthMod: + for healing, - for damage. If useChunks, healthmod = # of chunks

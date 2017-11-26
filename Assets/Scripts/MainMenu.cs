@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour {
 	// Start the game, proto scene
 	void GameStart()
 	{
-		SceneManager.LoadScene ("BaseScene", LoadSceneMode.Single);
+		SceneManager.LoadScene ("Level_1", LoadSceneMode.Single);
 	}
 
 	//Quits out application

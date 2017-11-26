@@ -42,18 +42,18 @@ public class LevelSelect : MonoBehaviour {
 	}
 	void Load1()
 	{
-		SceneManager.LoadScene ("BaseScene");
+		SceneManager.LoadScene ("Level_1");
 	}
 
 	// loads test scene
 	void Load2()
 	{
-		SceneManager.LoadScene ("World4");
+		SceneManager.LoadScene ("Level_2");
 	}
 
     void Load3()
     {
-        SceneManager.LoadScene("World3");
+        SceneManager.LoadScene("Level_3");
     }
 
     void Load4()

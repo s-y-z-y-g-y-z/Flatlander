@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour {
 
     // Audio Sources
     List<AudioSource> sfxSources;
-    AudioSource bgmSource;
+    public AudioSource bgmSource;
 
     public static SoundManager GetInstance()
     {
@@ -107,15 +107,16 @@ public class SoundManager : MonoBehaviour {
     }
 
     // Plays a sound effect clip. Pass randomize as true to randomize the sound's pitch.
-    public static void PlaySFX(AudioClip sfxClip, bool randomize)
+    public static void PlaySFX(AudioClip sfxClip, bool randomPitch, float modifyVolume)//modifyVolume is a normalized value----   ie(.5 = 50%)
     {
         SoundManager soundMan = GetInstance();
         AudioSource source = soundMan.GetSFXSource();
 
         source.volume = GetSFXVolume();
         source.clip = sfxClip;
+        source.volume = source.volume * modifyVolume;
 
-        if (randomize)
+        if (randomPitch)
             source.pitch = Random.Range(0.85f, 1.2f);
 
         source.Play();

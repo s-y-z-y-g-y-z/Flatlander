@@ -25,6 +25,7 @@ public class DeathScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        gm = FindObjectOfType<GM>();
         reset.onClick.AddListener(buttonReset);
         menu.onClick.AddListener(buttonMenu);
         scoreText.text = "Score: ";

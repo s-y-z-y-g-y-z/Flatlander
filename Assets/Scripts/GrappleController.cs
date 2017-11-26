@@ -67,6 +67,8 @@ public class GrappleController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gm = FindObjectOfType<GM>();
+        ps = FindObjectOfType<ParameterScreen>();
         recoil = FindObjectOfType<WeponRecoil>();
         line = gameObject.GetComponent<LineRenderer>();
         inputCtrl = FindObjectOfType<fInput>();
@@ -94,7 +96,7 @@ public class GrappleController : MonoBehaviour
         if (pCtrl.isSwinging)
         {
             HandleLength();
-            HandleSwinging(pCtrl.horizontal);
+            HandleSwingingPhysics(pCtrl.horizontal);
         }
         else
         {
@@ -143,7 +145,7 @@ public class GrappleController : MonoBehaviour
         jointLimits.limit = targetDist;
     }
 
-    void HandleSwinging(float horizontal)
+    void HandleSwingingPhysics(float horizontal)
     {
         Vector3 dir = curHook.transform.position - pCtrl.transform.position; 
         Vector3 angle;
@@ -232,7 +234,7 @@ public class GrappleController : MonoBehaviour
             recoil.isShooting = true;
 
             //plays shoot sound ~~JK&HA
-            SoundManager.PlaySFX(shootClip, true);
+            SoundManager.PlaySFX(shootClip, true, 1f);
 
             //pCtrl.playerRb.AddForceAtPosition(-transform.forward * recoilForce, transform.position, ForceMode.VelocityChange);
 
@@ -279,10 +281,11 @@ public class GrappleController : MonoBehaviour
     //called from HookController.cs
     public void SetHook(Rigidbody anchor)
     {
+        pCtrl.isSwinging = true;
         //checks to see whether the anchor is dynamic or static for pulling/swinging
         if (anchor == null)//look for rigidbody on object
         {
-            pCtrl.isSwinging = true;
+            
             //need to make move with objects;
             curHookRb.isKinematic = true;
             //joint.maxDistance = Vector3.Distance(transform.position, curHook.transform.position);

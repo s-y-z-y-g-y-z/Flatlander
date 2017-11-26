@@ -217,12 +217,12 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Flatlander.Plugins.csproj">
+      <Project>{44B5A64A-E055-53EF-3EFD-112705981AAB}</Project>
+      <Name>Flatlander.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -242,7 +242,6 @@
     <Compile Include="Assets\Scripts\IKHandler.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\ObjectScaler.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\ParameterScreen.cs" />
     <Compile Include="Assets\Scripts\ParticleManager.cs" />
@@ -262,6 +261,47 @@
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\Standard Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+    <None Include="Assets\Standard Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\UI\NEW_UI\Amatic_SC\OFL.txt" />
     <None Include="Assets\UI\OLD_UI\Amatic_SC\OFL.txt" />
   </ItemGroup>

@@ -3,7 +3,7 @@ guid: 01a754ccef8039942a72ce26b943e496
 timeCreated: 1507581710
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: base
     100002: //RootNode
@@ -322,10 +322,17 @@ ModelImporter:
     7400002: idleEnergy
     9500000: //RootNode
     13700000: base
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3a355e2a5a8ba2d47bfabd87343e0178, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -338,6 +345,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

@@ -75,6 +75,11 @@ public class ParameterScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        player = FindObjectOfType<SideScrollController>();
+        gunRecoil = FindObjectOfType<WeponRecoil>();
+        hook = FindObjectOfType<GrappleController>();
+        cam = FindObjectOfType<CameraController>();
+        gm = FindObjectOfType<GM>();
         isPaused = false;
         paramScreen.gameObject.SetActive(false);
         pauseScreen.SetActive(false);

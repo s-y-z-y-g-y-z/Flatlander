@@ -93,6 +93,7 @@ public class fInput : MonoBehaviour {
 
         if(Input.GetButtonDown("Reset"))
         {
+            pCtrl.DisableRagdoll();
             reset = true;
         }
         else

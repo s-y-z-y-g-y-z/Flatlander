@@ -2845,11 +2845,11 @@ MonoBehaviour:
   isSlowing: 1
   inContact: 1
   isDead: 1
-  drawDebug: 1
+  drawDebug: 0
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967039
-  maxImpact: 40
+  maxImpact: 80
   turnSpeed: 8
   leanSpeed: 10
   maxLean: 20
@@ -2900,7 +2900,9 @@ MonoBehaviour:
   gm: {fileID: 0}
   shootClip: {fileID: 8300000, guid: 5f21ec916ccfc64409c76e617aade808, type: 3}
   climbSpeed: 1
-  swingPower: 10
+  swingPower: 1.8
+  fallPower: 25
+  effectiveSwingAngle: 10
   fastClimbDamper: 0
   ropeJumpPower: 15
   jumpThreshold: 2
@@ -2913,6 +2915,7 @@ MonoBehaviour:
   ropeSmoothness: 7
   ropeDroop: 0
   hookIsSet: 0
+  drawDebug: 1
   pCtrl: {fileID: 114160651120588822}
   curHook: {fileID: 0}
   lineEnd: {x: -169.41133, y: -42.59779, z: 0.4118052}
@@ -2959,7 +2962,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609542228329044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39c865d67a7899b4e8dc9a6c9851c679, type: 3}
   m_Name: 
@@ -2993,7 +2996,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609542228329044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4171,6 +4174,6 @@ ConfigurableJoint:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
-  m_EnablePreprocessing: 1
+  m_EnablePreprocessing: 0
   m_MassScale: 0
   m_ConnectedMassScale: 1

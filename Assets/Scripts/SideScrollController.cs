@@ -187,9 +187,9 @@ public class SideScrollController : MonoBehaviour
                     playerRb.AddForce(xForceDirection * groundAccelerationPower, ForceMode.Force);
                 }
             }
-            else if(isGrounded&&isSwinging)
+            else if(isSwinging)
             {
-                playerRb.AddForce(xForceDirection * swingAccelerationPower, ForceMode.VelocityChange);
+                //playerRb.AddForce(xForceDirection * swingAccelerationPower, ForceMode.VelocityChange);
             }
             else
             {

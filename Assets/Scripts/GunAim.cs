@@ -9,6 +9,7 @@ public class GunAim : MonoBehaviour
     public Vector2 minMaxAim;
     private Transform rightShoulder;
     public ParameterScreen ps;
+    public GameObject reticle;
 
     // Use this for initialization
     void Start()

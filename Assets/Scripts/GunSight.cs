@@ -26,6 +26,15 @@ public class GunSight : MonoBehaviour
         range = Mathf.Clamp(range, 1f, grapple.range);
         line.positionCount = 2;
         line.SetPosition(0, transform.position);
-        line.SetPosition(1, transform.forward * range + transform.position);
+        line.SetPosition(1, inputCtrl.lookPos);
+
+        if (grapple.curHook == null)
+        {
+            line.enabled = true;
+        }
+        else
+        {
+            line.enabled = false;
+        }
     }
 }

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4668777284783838}
   - component: {fileID: 33449476015964856}
   - component: {fileID: 23357712344318540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4080372560655426}
   - component: {fileID: 33176724205820672}
   - component: {fileID: 23077264485658584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4589671915171080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hook_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 54408037630015924}
   - component: {fileID: 114878329978214638}
   - component: {fileID: 96160990855518314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HookBase
   m_TagString: Hook
   m_Icon: {fileID: 0}

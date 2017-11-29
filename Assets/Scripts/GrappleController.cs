@@ -41,6 +41,7 @@ public class GrappleController : MonoBehaviour
     [Header("Rope Attributes")]
     public int ropeSmoothness = 7;
     public float ropeDroop = -1f;
+    public LayerMask ropeCollisionMask;
 
     [Header("Conditionals")]
     public bool hookIsSet;
@@ -54,6 +55,7 @@ public class GrappleController : MonoBehaviour
     private LineRenderer line;
     private fInput inputCtrl;
     private SoftJointLimit jointLimits;
+    public List<Vector3> anchors = new List<Vector3>();
     [HideInInspector]
     public GameObject curHook;
     private Rigidbody curHookRb;
@@ -94,23 +96,31 @@ public class GrappleController : MonoBehaviour
     void FixedUpdate()
     {
 
-        HandleLine();
+        //HandleLine();
+        //SimpleLine();
+        SimpleLine();
         Mathf.Clamp(massInfluence, 0f, 3f);
         lineCoef = ropeDroop / 10f;
 
         if (pCtrl.isSwinging)
         {
-            HandleLength();
-            HandleSwingingPhysics(pCtrl.horizontal);
+            
+            HandleRopeLength();
+            if (!pCtrl.isGrounded)
+            {
+                HandleRopeCollision();
+                HandleSwingingPhysics(pCtrl.horizontal);
+            }
         }
         else
         {
+            //HandleLine();
             jointLimits.limit = range;
         }
         joint.linearLimit = jointLimits;
     }
 
-    void HandleLength()//broken(max length forced initially)
+    void HandleRopeLength()//broken(max length forced initially, not smooth)
     {
         curRange = Vector3.Distance(transform.TransformPoint(pCtrl.playerRb.centerOfMass), curHook.transform.position);
 
@@ -161,6 +171,7 @@ public class GrappleController : MonoBehaviour
         float curSwingAngle = Mathf.Abs(Vector2.SignedAngle(dir, Vector3.up));
         float normalizedPower = (effectiveSwingAngle - curSwingAngle) / effectiveSwingAngle;
 
+        
         if (drawDebug)
         {
             Debug.DrawRay(pCtrl.transform.position, angle, Color.red);
@@ -173,6 +184,7 @@ public class GrappleController : MonoBehaviour
             Debug.DrawRay(curHook.transform.position, rotatedVector1.normalized * dir.magnitude, Color.yellow);
             Debug.DrawRay(curHook.transform.position, rotatedVector2.normalized * dir.magnitude, Color.yellow);
         }
+        
 
 
         if (curSwingAngle <= effectiveSwingAngle)//fakes parametric resonance (aplifies motion by changing length of raduis).  On a real life swing you pull yourself up, here just adding force
@@ -192,6 +204,46 @@ public class GrappleController : MonoBehaviour
         }
     }
 
+    void HandleRopeCollision()
+    {
+
+
+        Vector3 curDir = anchors[anchors.Count-1] - pCtrl.transform.position;
+
+        Ray ropeRay = new Ray(pCtrl.transform.position + curDir * .1f, curDir);
+
+        RaycastHit ropeCollision;
+
+        Debug.DrawRay(pCtrl.transform.position + curDir * .1f, curDir *.8f, Color.green);
+
+        //add new anchor
+        if (Physics.Raycast(ropeRay, out ropeCollision, curDir.magnitude*.8f,ropeCollisionMask)) 
+        {
+            anchors.Add(ropeCollision.point);
+            curHook.transform.position = ropeCollision.point;
+        }
+
+        if (anchors.Count > 1)
+        {
+            Vector3 parentDir = anchors[anchors.Count - 2] - pCtrl.transform.position;
+
+            Ray playerToLastAnchor = new Ray(pCtrl.transform.position + parentDir * .1f, curDir);
+
+            Debug.DrawRay(pCtrl.transform.position + parentDir * .1f, parentDir * .8f, Color.yellow);
+
+            if (!Physics.Raycast(playerToLastAnchor, parentDir.magnitude * .8f, ropeCollisionMask) && !Physics.Raycast(ropeRay, curDir.magnitude * .8f, ropeCollisionMask))
+            {
+                jointLimits.limit = parentDir.magnitude;
+                joint.linearLimit = jointLimits;
+                curHook.transform.position = anchors[anchors.Count - 2];
+                anchors.Remove(anchors[anchors.Count - 1]);
+                if(anchors.Count==2)
+                {
+                    //curHook.transform.position = anchors[0];
+                }
+            }
+        }
+    }
 
     private void OnDrawGizmos()
     {
@@ -202,10 +254,28 @@ public class GrappleController : MonoBehaviour
         }
     }
 
+    public void SimpleLine()
+    {
+        if (curHook == null)
+        {
+            line.enabled = false;
+        }
+        else
+        {
+            line.enabled = true;
+            line.positionCount = anchors.Count+1;
+            line.SetPosition(anchors.Count, barrel.transform.position);
+            for (int i = 0; i < anchors.Count; i++)
+            {
+                line.SetPosition(i, anchors[i]);
+            }
+        }
+    }
     //handles line renderer
     public void HandleLine()
     {
         //checks current end position for line
+
         if (curHook == null)
         {
             lineEnd = barrel.transform.position + (barrel.transform.forward * .2f);
@@ -294,6 +364,7 @@ public class GrappleController : MonoBehaviour
 
     public void Retract()
     {
+        anchors.Clear();
         Destroy(curParticle);
         staticHook.SetActive(true);
         pCtrl.isSwinging = false;
@@ -304,11 +375,12 @@ public class GrappleController : MonoBehaviour
         curHook = null;
     }
 
-    //handles the actual hooking mechanic of the hook hooking
+    //if hook collides make the joint anchor pos same as hook rigidbody pos
     //takes in the hit rigidbody as the anchor point
     //called from HookController.cs
     public void SetHook(Rigidbody anchor)
     {
+        anchors.Add(curHook.transform.position);
         pCtrl.isSwinging = true;
         //checks to see whether the anchor is dynamic or static for pulling/swinging
         if (anchor == null)//look for rigidbody on object
@@ -316,7 +388,7 @@ public class GrappleController : MonoBehaviour
 
             //need to make move with objects;
             curHookRb.isKinematic = true;
-            //joint.maxDistance = Vector3.Distance(transform.position, curHook.transform.position);
+            jointLimits.limit = Vector3.Distance(transform.position, curHook.transform.position);
         }
         else
         {

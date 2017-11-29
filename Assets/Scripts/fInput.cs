@@ -54,7 +54,7 @@ public class fInput : MonoBehaviour {
         isPaused = ps.isPaused;
         paused = false;
         cursorMode = CursorMode.Auto;
-        Cursor.SetCursor(reticle, Vector2.zero, cursorMode);
+        Cursor.SetCursor(reticle, new Vector2(reticle.width/2f,reticle.height/2f),CursorMode.Auto);
 	}
 	
 	// Update is called once per frame

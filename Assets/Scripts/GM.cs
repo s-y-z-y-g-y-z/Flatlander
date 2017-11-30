@@ -112,7 +112,7 @@ public class GM : MonoBehaviour
         else if (ps.isPaused && !gameOver && !pCtrl.isDead)
         {
             pauseScreen.SetActive(true);
-            pCtrl.DisableRagdoll();
+            //pCtrl.DisableRagdoll();
             gCtrl.Retract();
 
             if (Input.GetButtonDown("Jump"))

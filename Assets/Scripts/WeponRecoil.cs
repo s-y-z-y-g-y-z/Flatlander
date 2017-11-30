@@ -34,7 +34,7 @@ public class WeponRecoil : MonoBehaviour {
         HandleRecoil();
         HandleGunSway();
 
-        if (pCtrl.yVelocity > 0f && !pCtrl.isGrounded && !pCtrl.isSwinging)
+        if (pCtrl.yVelocity > 0f && !pCtrl.isGrounded && !pCtrl.isAnchored)
         {
             isShouldered = true;
         }

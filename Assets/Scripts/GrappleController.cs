@@ -45,7 +45,10 @@ public class GrappleController : MonoBehaviour
 
     [Header("Conditionals")]
     public bool hookIsSet;
-    public bool drawDebug;
+    public bool SwingDebug;
+    public bool collisionDebug;
+    public bool addNewAnchor;
+    public bool unWrapCurrentAnchor;
 
     //INTERNALS
     private ConfigurableJoint joint;
@@ -60,7 +63,7 @@ public class GrappleController : MonoBehaviour
     public GameObject curHook;
     private Rigidbody curHookRb;
 
-
+    RaycastHit ropeCollision;
     private Rigidbody curAnchorRb;
     private Vector3 lineMid;
     public Vector3 lineEnd;
@@ -95,17 +98,15 @@ public class GrappleController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        //HandleLine();
-        //SimpleLine();
-        SimpleLine();
+        HandleLine();
+        
         Mathf.Clamp(massInfluence, 0f, 3f);
         lineCoef = ropeDroop / 10f;
 
         if (pCtrl.isSwinging)
         {
-            
             HandleRopeLength();
+
             if (!pCtrl.isGrounded)
             {
                 HandleRopeCollision();
@@ -114,7 +115,6 @@ public class GrappleController : MonoBehaviour
         }
         else
         {
-            //HandleLine();
             jointLimits.limit = range;
         }
         joint.linearLimit = jointLimits;
@@ -172,7 +172,7 @@ public class GrappleController : MonoBehaviour
         float normalizedPower = (effectiveSwingAngle - curSwingAngle) / effectiveSwingAngle;
 
         
-        if (drawDebug)
+        if (SwingDebug)
         {
             Debug.DrawRay(pCtrl.transform.position, angle, Color.red);
             //Debug.Log("Angle: " + Mathf.Abs(curSwingAngle));
@@ -206,64 +206,86 @@ public class GrappleController : MonoBehaviour
 
     void HandleRopeCollision()
     {
+        Vector3 curDir = anchors[anchors.Count-1] - pCtrl.transform.position;//vect between player and current hook
 
-
-        Vector3 curDir = anchors[anchors.Count-1] - pCtrl.transform.position;
-
-        Ray ropeRay = new Ray(pCtrl.transform.position + curDir * .1f, curDir);
-
-        RaycastHit ropeCollision;
-
-        Debug.DrawRay(pCtrl.transform.position + curDir * .1f, curDir *.8f, Color.green);
+        Ray ropeRay = new Ray(pCtrl.transform.position + curDir * .1f, curDir);//ray of vector
 
         //add new anchor
         if (Physics.Raycast(ropeRay, out ropeCollision, curDir.magnitude*.8f,ropeCollisionMask)) 
         {
+            addNewAnchor = true;
             anchors.Add(ropeCollision.point);
             curHook.transform.position = ropeCollision.point;
         }
+        else
+        {
+            addNewAnchor = false;
+        }
 
+        //unwrap
         if (anchors.Count > 1)
         {
-            Vector3 parentDir = anchors[anchors.Count - 2] - pCtrl.transform.position;
+            //CheckRopeAngle();
+            Vector3 currentDir = anchors[anchors.Count - 1] - pCtrl.transform.position;
+            Vector3 previousDir = anchors[anchors.Count - 1] - anchors[anchors.Count - 2];  //vect between player and last hook
 
-            Ray playerToLastAnchor = new Ray(pCtrl.transform.position + parentDir * .1f, curDir);
+            //float curRopeAngle=Vector2.Angle(curDir, previousDir);
 
-            Debug.DrawRay(pCtrl.transform.position + parentDir * .1f, parentDir * .8f, Color.yellow);
+            float curRopeAngle=Mathf.Atan2(Vector3.Dot(ropeCollision.normal.normalized, Vector3.Cross(previousDir, curDir)),Vector3.Dot(previousDir, curDir)) * Mathf.Rad2Deg;
+            //holy fuck honestly idk dot product barely makes sense to me
+            //dot product does is get the amount that a vector is pointing the same direction as another vector, so im checking if the angle vector is pointing the same way as the surface normal
 
-            if (!Physics.Raycast(playerToLastAnchor, parentDir.magnitude * .8f, ropeCollisionMask) && !Physics.Raycast(ropeRay, curDir.magnitude * .8f, ropeCollisionMask))
+            Debug.Log(curRopeAngle);
+
+            if (curRopeAngle<0)
             {
-                jointLimits.limit = parentDir.magnitude;
-                joint.linearLimit = jointLimits;
+                unWrapCurrentAnchor = true;
                 curHook.transform.position = anchors[anchors.Count - 2];
                 anchors.Remove(anchors[anchors.Count - 1]);
-                if(anchors.Count==2)
-                {
-                    //curHook.transform.position = anchors[0];
-                }
+                jointLimits.limit = (pCtrl.transform.position - curHook.transform.position).magnitude;
+                joint.linearLimit = jointLimits;
             }
+            /*
+            Ray playerToLastAnchor = new Ray(pCtrl.transform.position + parentDir * .1f, parentDir);
+
+            if (!Physics.Raycast(playerToLastAnchor, parentDir.magnitude * .8f, ropeCollisionMask) && !addNewAnchor)
+            {
+
+            }
+            else
+            {
+                unWrapCurrentAnchor = false;
+            }
+            */
+            if (collisionDebug)
+            {
+                Debug.DrawRay(anchors[anchors.Count - 2], previousDir, Color.yellow);
+            }
+            
         }
+            if (collisionDebug)
+        {
+            Debug.DrawRay(pCtrl.transform.position, curDir, Color.green);
+        }
+        
     }
 
-    private void OnDrawGizmos()
+    void CheckRopeAngle()
     {
-        Gizmos.color = Color.red;
-        if (pCtrl.isSwinging)
-        {
-            Gizmos.DrawSphere(Vector3.Lerp(curHook.transform.position, transform.TransformPoint(pCtrl.playerRb.centerOfMass), jumpThreshold / curRange), .4f);
-        }
+
     }
 
-    public void SimpleLine()
+    void HandleLine()
     {
-        if (curHook == null)
+        if (curHook == null||curHook&&!pCtrl.isSwinging)
         {
-            line.enabled = false;
+            QualityLine();
         }
         else
         {
             line.enabled = true;
             line.positionCount = anchors.Count+1;
+
             line.SetPosition(anchors.Count, barrel.transform.position);
             for (int i = 0; i < anchors.Count; i++)
             {
@@ -272,7 +294,7 @@ public class GrappleController : MonoBehaviour
         }
     }
     //handles line renderer
-    public void HandleLine()
+    void QualityLine()
     {
         //checks current end position for line
 
@@ -316,8 +338,6 @@ public class GrappleController : MonoBehaviour
                 Vector3 iMid = Vector3.Lerp(iStart, iEnd, 0.5f) + new Vector3(0f, (lineCoef * distRatio) * Mathf.Sqrt(Vector3.Distance(barrel.transform.position, Vector3.Lerp(iStart, iEnd, 0.5f))), 0f);//parabolas! highschool did pay off!
                 line.SetPosition(i, iMid);
             }
-            //rope collision
-            //if(Physics.Raycast())
         }
     }
 
@@ -334,15 +354,15 @@ public class GrappleController : MonoBehaviour
             //plays shoot sound ~~JK&HA
             SoundManager.PlaySFX(shootClip, true, 1f);
 
-            //pCtrl.playerRb.AddForceAtPosition(-transform.forward * recoilForce, transform.position, ForceMode.VelocityChange);
-
-            pCtrl.playerRb.AddForce(-transform.forward * recoilForce, ForceMode.VelocityChange);
-
             curHook = Instantiate(HookPrefab, barrel.transform.position, barrel.transform.rotation);
             curHookRb = curHook.GetComponent<Rigidbody>();
-            curHookRb.AddForce(barrel.transform.forward * power, ForceMode.Impulse);
-            curParticle = Instantiate(gunshotParticlePrefab, barrel.transform.position, barrel.transform.rotation);
+            
 
+            pCtrl.playerRb.AddForce(-transform.forward * recoilForce, ForceMode.Force);
+            curHookRb.AddForce(barrel.transform.forward * power, ForceMode.Impulse);//shoot projectile
+
+
+            curParticle = Instantiate(gunshotParticlePrefab, barrel.transform.position, barrel.transform.rotation);
             curParticle.transform.parent = barrel.transform;
 
             Destroy(curParticle, 5f);
@@ -402,6 +422,15 @@ public class GrappleController : MonoBehaviour
             joint.connectedAnchor = target;
             joint.enableCollision = true;
             curHook.SetActive(false);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        if (pCtrl.isSwinging)
+        {
+            Gizmos.DrawSphere(Vector3.Lerp(curHook.transform.position, transform.TransformPoint(pCtrl.playerRb.centerOfMass), jumpThreshold / curRange), .4f);
         }
     }
 }

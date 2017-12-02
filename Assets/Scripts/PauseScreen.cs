@@ -17,9 +17,7 @@ public class PauseScreen : MonoBehaviour {
     public Vector3 initPos;
 
     // Use this for initialization
-    void Start ()
-    {
-        gm = FindObjectOfType<GM>();
+    void Start () {
         reset.onClick.AddListener(buttonReset);
         menu.onClick.AddListener(buttonMenu);
         initPos = transform.position;

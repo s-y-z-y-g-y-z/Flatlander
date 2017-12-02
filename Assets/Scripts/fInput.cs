@@ -93,7 +93,7 @@ public class fInput : MonoBehaviour {
 
         if(Input.GetButtonDown("Reset"))
         {
-            //pCtrl.DisableRagdoll();
+            pCtrl.DisableRagdoll();
             reset = true;
         }
         else
@@ -125,7 +125,7 @@ public class fInput : MonoBehaviour {
         //Vector3 point = (ray.GetPoint(Vector3.Distance(ray.origin, grappleCtrl.barrel.transform.position))- grappleCtrl.barrel.transform.position).normalized*4f;
         Vector3 point = ray.GetPoint(Vector3.Distance(ray.origin, grappleCtrl.barrel.transform.position));
 
-        if (pCtrl.isAnchored && grappleCtrl.curHook != null)
+        if (pCtrl.isSwinging && grappleCtrl.curHook != null)
         {
             lookPos = grappleCtrl.curHook.transform.position;
         }

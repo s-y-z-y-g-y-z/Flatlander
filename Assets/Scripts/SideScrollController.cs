@@ -55,7 +55,7 @@ public class SideScrollController : MonoBehaviour
     public float currentVelocity;
     public float yVelocity;
     public bool isGrounded;
-    public bool isAnchored;             //from GrappleController.cs
+    public bool isSwinging;             //from GrappleController.cs
     public bool facingLeft;
     public bool isSlowing;              //player is decelerating horizontally
     public bool inContact;
@@ -187,7 +187,7 @@ public class SideScrollController : MonoBehaviour
                     playerRb.AddForce(xForceDirection * groundAccelerationPower, ForceMode.Force);
                 }
             }
-            else if(isAnchored)
+            else if(isSwinging)
             {
                 //playerRb.AddForce(xForceDirection * swingAccelerationPower, ForceMode.VelocityChange);
             }
@@ -343,7 +343,7 @@ public class SideScrollController : MonoBehaviour
         float dir = Mathf.Sign(localVelocity.z);
         leanAmt = Mathf.Clamp01(Mathf.Abs(playerRb.velocity.x) / maxSpeed);
 
-        if (isSlowing||isAnchored)
+        if (isSlowing||isSwinging)
         {
             targetLean= -leanAmt*dir;
         }
@@ -356,7 +356,7 @@ public class SideScrollController : MonoBehaviour
 
 
         float look;
-        if (!isAnchored)
+        if (!isSwinging)
         {
             if (lookPos.x < transform.position.x)
             {

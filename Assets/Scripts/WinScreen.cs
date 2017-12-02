@@ -16,6 +16,7 @@ public class WinScreen : MonoBehaviour
 
     //PUBLIC SCRIPT REFERENCES
     public GM gm;
+    public ParameterScreen ps;
 
     //public buttons
     public Button resetButton;

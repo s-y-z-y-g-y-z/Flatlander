@@ -36,6 +36,7 @@ public class GM : MonoBehaviour
     private float timer;
     private float roundedTimer;
     private float startTime;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -55,6 +56,7 @@ public class GM : MonoBehaviour
     void Update()
     {
         healthVal = hd.healthVal;
+        checkPause();
         checkDead();
         handlePauses();
     }
@@ -75,19 +77,18 @@ public class GM : MonoBehaviour
     {
         if(healthVal <= 0 || inputCtrl.reset || pCtrl.isDead)
         {
-            Time.timeScale = Mathf.Lerp(Time.timeScale, .3f, Time.unscaledDeltaTime * 1f);
             pCtrl.isDead = true;
             pCtrl.EnableRagdoll();
             gameOver = true;
         }
         else
         {
-            Time.timeScale = 1f;
             pCtrl.DisableRagdoll();
             gameOver = false;
         }
     }
 
+    //handles each case for pausing
     public void handlePauses()
     {
         if (gameOver)
@@ -114,7 +115,6 @@ public class GM : MonoBehaviour
             pauseScreen.SetActive(true);
             pCtrl.DisableRagdoll();
             gCtrl.Retract();
-
             if (Input.GetButtonDown("Jump"))
             {
                 ResetScene();
@@ -161,8 +161,6 @@ public class GM : MonoBehaviour
         }
 
         winArea.win = false;
-
-
     }
 
     public void updateClock()
@@ -172,6 +170,20 @@ public class GM : MonoBehaviour
         roundedTimer = Mathf.RoundToInt(timer);
 
         clock.text = roundedTimer.ToString();
+    }
+
+    //checks isPaused to stop the Time
+    public void checkPause()
+    {
+        //pauses the game
+        if (ps.isPaused && !pCtrl.isDead && !gameOver)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     public float calculateScore()

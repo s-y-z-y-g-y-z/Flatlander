@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4699094546023038}
   - component: {fileID: 198206862253868810}
   - component: {fileID: 199005304517624326}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LostSouls_Points_ParticleEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4087747073570964}
   - component: {fileID: 114668413119127880}
   - component: {fileID: 135174902515694604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollectableCollider
   m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964417578794688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collectable 2
   m_TagString: scoreCollectible
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 23024029595358698}
   - component: {fileID: 64092735163693946}
   - component: {fileID: 114255656684391708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pSphere1
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4701409529738702}
   - component: {fileID: 108945927256458758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LostSoul_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

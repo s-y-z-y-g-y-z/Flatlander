@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class WeponRecoil : MonoBehaviour {
 
+    //PUBLIC SCRIPT REFERENCES
+    public SideScrollController pCtrl;
+    public ParameterScreen ps;
+
+    //PUBLIC ATTRIBUTES
     public bool isShooting;
     public float recoilSpeed=10f;
     public float recoilLength=.3f;
@@ -11,10 +16,11 @@ public class WeponRecoil : MonoBehaviour {
     public bool moveToInitPosition;
     public bool isShouldered;
     public float dist;
-    Vector3 targetPos;
-    Quaternion targetRotation;
-    Transform ShoulderPos;//parent
-    SideScrollController pCtrl;
+
+    public Vector3 targetPos;
+    public Quaternion targetRotation;
+    public Transform ShoulderPos;//parent
+    
     public Transform aimingTrans;
 
     public float animBobbingSpeed = 20.0f;  // Speed of sine movement
@@ -32,7 +38,10 @@ public class WeponRecoil : MonoBehaviour {
 	void Update ()
     {
         HandleRecoil();
-        HandleGunSway();
+        if (!ps.isPaused)
+        {
+            HandleGunSway();
+        }
 
         if (pCtrl.yVelocity > 0f && !pCtrl.isGrounded && !pCtrl.isSwinging)
         {

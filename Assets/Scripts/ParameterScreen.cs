@@ -68,7 +68,6 @@ public class ParameterScreen : MonoBehaviour {
     //the score nuber in the HUD
     public Text scoreNum;
     
-    [HideInInspector]
     public bool isPaused;
 
     public fInput finput;
@@ -90,7 +89,7 @@ public class ParameterScreen : MonoBehaviour {
 	void Update () {
         updateScripts();
         updateScore();
-        checkPause();
+        //checkPause();
 
         if (isPaused && Input.GetButtonDown("Jump"))
         {
@@ -99,6 +98,8 @@ public class ParameterScreen : MonoBehaviour {
         }
     }
 
+    /*
+     * MOVED TO THE GM
     //checks isPaused to stop the Time
     public void checkPause()
     {
@@ -112,6 +113,7 @@ public class ParameterScreen : MonoBehaviour {
             Time.timeScale = 1.0f;
         }
     }
+    */
 
     //Called in fInput.cs when escape is pressed
     public void handleParamScreen()

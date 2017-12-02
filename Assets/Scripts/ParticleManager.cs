@@ -47,7 +47,7 @@ public class ParticleManager : MonoBehaviour {
         }
     }
     
-    /*
+    
     //Need to figure out how to find velocity when landing
     public void handleLandingPEs()
     {
@@ -61,5 +61,5 @@ public class ParticleManager : MonoBehaviour {
             Destroy(clone.gameObject, 0.75f);
         }
     }
-    */
+    
 }

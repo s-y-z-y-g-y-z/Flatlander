@@ -340,8 +340,6 @@ public class SideScrollController : MonoBehaviour
     //handles player rotation
     void HandleRotation()
     {
-
-
         float dir = Mathf.Sign(localVelocity.z);
         leanAmt = Mathf.Clamp01(Mathf.Abs(playerRb.velocity.x) / maxSpeed);
 

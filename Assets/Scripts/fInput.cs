@@ -62,7 +62,7 @@ public class fInput : MonoBehaviour {
     {
         
         isPaused = ps.isPaused;
-        HandlePause();
+        HandlePauseScreen();
         ToggleSnap();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
@@ -175,7 +175,7 @@ public class fInput : MonoBehaviour {
 
     //JOSH KARMEL
     //Handles pausing the game
-    void HandlePause()
+    void HandlePauseScreen()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {

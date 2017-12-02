@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4300773263777074}
   - component: {fileID: 198576801676417554}
   - component: {fileID: 199765650799797494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LostSouls_Health_ParticleEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4087747073570964}
   - component: {fileID: 114668413119127880}
   - component: {fileID: 135115698246829294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollectableCollider
   m_TagString: CollectableCollider
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 23881798635967320}
   - component: {fileID: 64955312210178836}
   - component: {fileID: 114160048030845100}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pSphere1
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4039649862802030}
   - component: {fileID: 108237184196066026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LostSoul_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964417578794688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collectable 1
   m_TagString: healCollectible
   m_Icon: {fileID: 0}

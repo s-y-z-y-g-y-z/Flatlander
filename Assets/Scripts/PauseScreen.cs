@@ -8,6 +8,7 @@ public class PauseScreen : MonoBehaviour {
 
     //PUBLIC SCRIPT REFERENCES
     public GM gm;
+    public ParameterScreen ps;
 
     //public buttons
     public Button reset;
@@ -26,14 +27,14 @@ public class PauseScreen : MonoBehaviour {
 	void Update ()
     {
         if (Input.GetKey(KeyCode.Escape))
+        {
             gameObject.transform.position = initPos;
+        }
 
         if (gameObject.activeSelf)
         {
             gm.LerpUI(gameObject, targetPos.transform.position, 5f, true);
         }
-       
-        
     }
 
     public void buttonReset()
